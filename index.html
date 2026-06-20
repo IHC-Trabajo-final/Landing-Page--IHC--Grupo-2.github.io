@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MemoCare — Cuidando recuerdos, acompañando vidas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR-->
+<header class="navbar">
+  <div class="navbar__container">
+
+    <a href="#" class="navbar__marca">
+      <svg viewBox="0 0 40 40" aria-hidden="true" class="navbar__logo">
+        <path d="M20 4c8.8 0 16 7.2 16 16s-7.2 16-16 16C13 36 7 31.5 5 25c-1.3-4 1-7 4.5-7 2.5 0 4 1.8 4.5 4.2 1 4.5 4 7.3 8.3 7.3 5.3 0 9.7-4.3 9.7-9.5S26.6 10.5 21.3 10.5c-1.6 0-3.1.4-4.4 1.1C18.7 8 21 4 20 4z" fill="var(--color-turquesa)"/>
+        <circle cx="13.5" cy="17.5" r="2.1" fill="var(--color-azul-oscuro)"/>
+      </svg>
+      <span>MemoCare</span>
+    </a>
+
+    <nav class="navbar__enlaces" aria-label="Navegación principal">
+      <a href="#" class="navbar__enlace navbar__enlace--activo">Inicio</a>
+      <a href="#funciones" class="navbar__enlace">Funciones</a>
+      <a href="#beneficios" class="navbar__enlace">Beneficios</a>
+      <a href="#testimonios" class="navbar__enlace">Testimonios</a>
+      <a href="#contacto" class="navbar__enlace">Contáctanos</a>
+    </nav>
+
+    <div class="navbar__acciones">
+      <div class="navbar__buscador">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="text" placeholder="Buscar..." aria-label="Buscar">
+      </div>
+      <button class="navbar__menu-boton" aria-label="Abrir menú de usuario">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="navbar__perfil" aria-label="Perfil de usuario">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="white" stroke-width="2"/><path d="M5 20c1.5-4 4.5-6 7-6s5.5 2 7 6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <button class="navbar__hamburguesa" id="boton-menu-movil" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+
+  <nav class="navbar__enlaces-movil" id="menu-movil" aria-label="Navegación móvil">
+    <a href="#" class="navbar__enlace navbar__enlace--activo">Inicio</a>
+    <a href="#funciones" class="navbar__enlace">Funciones</a>
+    <a href="#beneficios" class="navbar__enlace">Beneficios</a>
+    <a href="#testimonios" class="navbar__enlace">Testimonios</a>
+    <a href="#contacto" class="navbar__enlace">Contáctanos</a>
+  </nav>
+</header>
+
+
+<!--HERO-->
+<section class="hero">
+  <div class="hero__container">
+
+    <div class="hero__contenido">
+      <h1 class="hero__titulo">
+        Cuidando recuerdos,<br>
+        <span class="hero__titulo-acento">acompañando vidas.</span>
+      </h1>
+
+      <p class="hero__texto">
+        MemoCare es la aplicación que ayuda a los adultos mayores a estimular sus recuerdos en sus vidas cotidianas, realizando actividades importantes y manteniéndose conectados con sus familias.
+      </p>
+
+      <div class="hero__acciones">
+        <button class="boton boton--morado">
+          <svg viewBox="0 0 24 24" fill="white" aria-hidden="true" class="boton__icono"><circle cx="12" cy="12" r="10" fill="white" opacity="0.18"/><path d="M10 8l6 4-6 4V8z" fill="white"/></svg>
+          Cómo funcionamos
+        </button>
+        <button class="boton boton--contorno">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="boton__icono"><circle cx="9" cy="8" r="3.2" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 19c1-3.6 3.3-5.5 5.5-5.5s4.5 1.9 5.5 5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="17.5" cy="9" r="2.6" stroke="currentColor" stroke-width="1.8"/><path d="M14.8 19c.7-2.7 2.4-4.2 3.9-4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          Soy familiar o cuidador
+        </button>
+      </div>
+
+      <div class="hero__indicadores">
+        <span class="hero__punto"></span>
+        <span class="hero__punto hero__punto--activo"></span>
+        <span class="hero__punto"></span>
+      </div>
+    </div>
+
+    <div class="hero__ilustracion">
+      <svg viewBox="0 0 460 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="hero__svg">
+        <!-- alfombra -->
+        <ellipse cx="240" cy="372" rx="180" ry="22" fill="#F0D9DD"/>
+        <ellipse cx="240" cy="372" rx="120" ry="14" fill="#E7C2C9"/>
+
+        <!-- sillón -->
+        <rect x="90" y="250" width="300" height="115" rx="30" fill="#F4D58D"/>
+        <rect x="72" y="222" width="40" height="135" rx="18" fill="#EFC468"/>
+        <rect x="368" y="222" width="40" height="135" rx="18" fill="#EFC468"/>
+        <rect x="90" y="232" width="300" height="32" rx="16" fill="#F8E3AC"/>
+
+        <!-- familiar -->
+        <g>
+          <ellipse cx="195" cy="368" rx="34" ry="10" fill="#1B2A6B" opacity="0.12"/>
+          <!-- piernas -->
+          <rect x="178" y="300" width="16" height="68" rx="8" fill="#3B4A8B"/>
+          <rect x="200" y="300" width="16" height="68" rx="8" fill="#3B4A8B"/>
+          <ellipse cx="184" cy="370" rx="13" ry="7" fill="#FAFAFA"/>
+          <ellipse cx="208" cy="370" rx="13" ry="7" fill="#FAFAFA"/>
+          <!-- torso -->
+          <path d="M168 230c0-16 12-28 30-28s30 12 30 28v76h-60v-76z" fill="#E8833A"/>
+          <!-- manos juntas cerca del pecho-->
+          <path d="M196 240c8 2 16 8 18 18" stroke="#E8833A" stroke-width="14" stroke-linecap="round"/>
+          <circle cx="216" cy="258" r="8" fill="#F2C9A0"/>
+          <path d="M172 242c-6 4-10 12-9 22" stroke="#E8833A" stroke-width="14" stroke-linecap="round"/>
+          <circle cx="180" cy="262" r="8" fill="#F2C9A0"/>
+          <!-- destellos de gesto -->
+          <path d="M222 246l3-4M226 252l4-1" stroke="#9A9AA0" stroke-width="1.6" stroke-linecap="round"/>
+          <!-- cabeza -->
+          <circle cx="198" cy="196" r="27" fill="#F2C9A0"/>
+          <path d="M172 192c-3-22 11-38 27-38 17 0 31 15 27 35-4-11-15-17-27-17s-23 7-27 20z" fill="#B5432C"/>
+          <path d="M170 200c-3-4-3-9 0-12" stroke="#B5432C" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <path d="M226 200c3-4 3-9 0-12" stroke="#B5432C" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <circle cx="190" cy="200" r="2.2" fill="#5C3A21"/>
+          <circle cx="208" cy="200" r="2.2" fill="#5C3A21"/>
+          <path d="M188 188c2-2.5 6-2.5 8 0M204 188c2-2.5 6-2.5 8 0" stroke="#5C3A21" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+          <path d="M191 210c3 2.5 9 2.5 12 0" stroke="#B5754F" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <ellipse cx="178" cy="208" rx="5" ry="3.5" fill="#F3A8A0" opacity="0.6"/>
+        </g>
+
+        <!-- adulto mayor -->
+        <g>
+          <ellipse cx="280" cy="368" rx="36" ry="10" fill="#1B2A6B" opacity="0.12"/>
+          <!-- piernas -->
+          <rect x="262" y="312" width="15" height="56" rx="7" fill="#1B2A6B"/>
+          <rect x="284" y="312" width="15" height="56" rx="7" fill="#1B2A6B"/>
+          <ellipse cx="269" cy="370" rx="12" ry="6" fill="#2E3A6B"/>
+          <ellipse cx="291" cy="370" rx="12" ry="6" fill="#2E3A6B"/>
+          <!-- vestido -->
+          <path d="M248 232c0-18 14-30 32-30s32 12 32 30l8 84h-80l8-84z" fill="#7B2E3B"/>
+          <path d="M252 268c10 8 46 8 56 0" stroke="#5E2230" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <!-- manos cruzadas sobre el abdomen -->
+          <path d="M266 250c-4 10-2 20 6 26" stroke="#7B2E3B" stroke-width="14" stroke-linecap="round"/>
+          <path d="M294 250c4 10 2 20-6 26" stroke="#7B2E3B" stroke-width="14" stroke-linecap="round"/>
+          <circle cx="272" cy="278" r="8" fill="#F2C9A0"/>
+          <circle cx="288" cy="278" r="8" fill="#F2C9A0"/>
+          <!-- cabeza -->
+          <circle cx="280" cy="200" r="25" fill="#F2C9A0"/>
+          <path d="M256 198c-4-24 10-42 24-42 15 0 28 16 25 38-8-10-18-7-24-7-8 0-20-2-25 11z" fill="#E7E7EA"/>
+          <path d="M258 196c5-5 13-8 22-8s17 3 22 8" stroke="#D8D8DC" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <!-- lentes -->
+          <circle cx="273" cy="202" r="6.5" fill="none" stroke="#5C3A21" stroke-width="1.6"/>
+          <circle cx="289" cy="202" r="6.5" fill="none" stroke="#5C3A21" stroke-width="1.6"/>
+          <path d="M279.5 202h3" stroke="#5C3A21" stroke-width="1.6"/>
+          <path d="M266.5 200h-4M295.5 200h4" stroke="#5C3A21" stroke-width="1.4" stroke-linecap="round"/>
+          <circle cx="273" cy="202" r="2" fill="#5C3A21"/>
+          <circle cx="289" cy="202" r="2" fill="#5C3A21"/>
+          <path d="M273 213c3 2 8 2 11 0" stroke="#B5754F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+        </g>
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<!--SERVICIOS-->
+<section class="servicios" id="servicios">
+  <div class="servicios__container">
+
+    <div class="servicios__encabezado">
+      <h2 class="servicios__titulo">Todo lo que te ofrecemos</h2>
+      <span class="servicios__corazon">💚</span>
+    </div>
+
+    <div class="servicios__grid">
+
+      <article class="tarjeta-servicio">
+        <div class="tarjeta-servicio__icono tarjeta-servicio__icono--turquesa">
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M24 13a10 10 0 0 0-10 10v4l-2 4h24l-2-4v-4a10 10 0 0 0-10-10z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+            <path d="M20 35a4 4 0 0 0 8 0" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="tarjeta-servicio__titulo">Recordatorios inteligentes</h3>
+        <p class="tarjeta-servicio__texto">Notifica las actividades cotidianas e importantes</p>
+      </article>
+
+      <article class="tarjeta-servicio">
+        <div class="tarjeta-servicio__icono tarjeta-servicio__icono--morado">
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M24 36s-12-7.5-12-17a8 8 0 0 1 14.6-4.5A8 8 0 0 1 36 19c0 9.5-12 17-12 17z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+            <path d="M16 22l5 5 11-11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+          </svg>
+        </div>
+        <h3 class="tarjeta-servicio__titulo">Monitoreo diario</h3>
+        <p class="tarjeta-servicio__texto">Seguimiento del progreso y bienestar diario</p>
+      </article>
+
+      <article class="tarjeta-servicio">
+        <div class="tarjeta-servicio__icono tarjeta-servicio__icono--rojo">
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect x="11" y="14" width="26" height="18" rx="9" stroke="currentColor" stroke-width="2.4"/>
+            <path d="M18 32l-3 6 8-6" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+            <circle cx="19" cy="23" r="1.8" fill="currentColor"/>
+            <circle cx="24" cy="23" r="1.8" fill="currentColor"/>
+            <circle cx="29" cy="23" r="1.8" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 class="tarjeta-servicio__titulo">Conexión familiar</h3>
+        <p class="tarjeta-servicio__texto">Dinámicas, mensajes, fotos y videos que reviven los momentos en familia</p>
+      </article>
+
+      <article class="tarjeta-servicio">
+        <div class="tarjeta-servicio__icono tarjeta-servicio__icono--amarillo">
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <circle cx="24" cy="24" r="13" stroke="currentColor" stroke-width="2.4"/>
+            <circle cx="19" cy="21" r="1.8" fill="currentColor"/>
+            <circle cx="29" cy="21" r="1.8" fill="currentColor"/>
+            <path d="M18 28c2 3 5 4.5 6 4.5s4-1.5 6-4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+        <h3 class="tarjeta-servicio__titulo">Fácil de usar</h3>
+        <p class="tarjeta-servicio__texto">Diseñada para los adultos mayores. Simple y accesible</p>
+      </article>
+
+      <article class="tarjeta-servicio">
+        <div class="tarjeta-servicio__icono tarjeta-servicio__icono--azul">
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M24 12l16 7v8c0 9-6.6 14.8-16 18-9.4-3.2-16-9-16-18v-8l16-7z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+            <path d="M18 24l4.5 4.5L31 19" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="tarjeta-servicio__titulo">Seguridad confiable</h3>
+        <p class="tarjeta-servicio__texto">Tu información y la de tu familia se mantendrán protegidas</p>
+      </article>
+
+      <article class="tarjeta-servicio">
+        <div class="tarjeta-servicio__icono tarjeta-servicio__icono--verde">
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <text x="24" y="31" font-size="22" font-weight="700" text-anchor="middle" fill="currentColor" font-family="Arial, sans-serif">A</text>
+            <path d="M12 36h24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="tarjeta-servicio__titulo">Accesible para todos</h3>
+        <p class="tarjeta-servicio__texto">Letras y botones grandes, alto contraste y configuración personalizada</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!--BANNER INFERIOR (CTA descarga)-->
+<section class="banner-app">
+  <div class="banner-app__container">
+
+    <div class="banner-app__mensaje">
+      <div class="banner-app__avatar">
+        <svg viewBox="0 0 80 80" aria-hidden="true">
+          <circle cx="40" cy="40" r="40" fill="var(--color-morado-suave)"/>
+          <circle cx="30" cy="34" r="11" fill="#F2C9A0"/>
+          <path d="M22 32c-1-9 4-15 9-15s10 6 9 14c-4-4-12-4-18 1z" fill="#7A4A2B"/>
+          <path d="M19 58c1-10 6-15 11-15s10 5 11 15" fill="#E8833A"/>
+          <circle cx="55" cy="40" r="10" fill="#E7E7EA"/>
+          <path d="M48 40c-1-8 3-13 8-13s9 5 8 12c-3-3-10-3-16 1z" fill="#D8D8DC"/>
+          <path d="M46 60c1-9 5-13 9-13s8 4 9 13" fill="#7B2E3B"/>
+        </svg>
+      </div>
+      <div class="banner-app__texto">
+        <p class="banner-app__titulo">MemoCare está aquí para acompañarte cada día <span class="banner-app__corazon">🩷</span></p>
+        <p class="banner-app__subtitulo">Porque cada recuerdo importa, y merece ser guardado</p>
+      </div>
+    </div>
+
+    <button class="boton boton--morado banner-app__boton">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="boton__icono"><path d="M12 4v12m0 0l-5-5m5 5l5-5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 19h14" stroke="white" stroke-width="2.2" stroke-linecap="round"/></svg>
+      Descargar App
+    </button>
+
+  </div>
+</section>
+
+<!--1. SECCIÓN FUNCIONES-->
+<section class="funciones" id="funciones">
+  <div class="funciones__container">
+    <div class="funciones__encabezado">
+      <span class="etiqueta">Funciones</span>
+      <h2 class="funciones__titulo">Funciones que hacen cada recuerdo más especial</h2>
+      <p class="funciones__subtitulo">MemoCare brinda herramientas diseñadas para acompañar y estimular la memoria de los adultos mayores.</p>
+    </div>
+
+    <div class="funciones__grid">
+
+      <article class="tarjeta-funcion">
+        <div class="tarjeta-funcion__icono tarjeta-funcion__icono--turquesa">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="20" fill="currentColor" opacity="0.12"/>
+            <path d="M16 24c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="18" cy="28" r="3" fill="currentColor"/>
+            <circle cx="24" cy="31" r="3" fill="currentColor"/>
+            <circle cx="30" cy="28" r="3" fill="currentColor"/>
+            <path d="M24 16v-3" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="tarjeta-funcion__titulo">Actividades cognitivas</h3>
+        <p class="tarjeta-funcion__texto">Juegos y ejercicios para estimular la memoria.</p>
+      </article>
+
+      <article class="tarjeta-funcion">
+        <div class="tarjeta-funcion__icono tarjeta-funcion__icono--morado">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="20" fill="currentColor" opacity="0.12"/>
+            <rect x="13" y="14" width="22" height="20" rx="2.5" stroke="currentColor" stroke-width="2.4"/>
+            <circle cx="19" cy="20" r="2.3" stroke="currentColor" stroke-width="2.2"/>
+            <path d="M13 29l6-5 4 3.5 5-5 7 6.5" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="tarjeta-funcion__titulo">Álbum de recuerdos</h3>
+        <p class="tarjeta-funcion__texto">Guardar fotos, historias y momentos importantes.</p>
+      </article>
+
+      <article class="tarjeta-funcion">
+        <div class="tarjeta-funcion__icono tarjeta-funcion__icono--azul">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="20" fill="currentColor" opacity="0.12"/>
+            <path d="M24 13a10 10 0 0 0-10 10v4l-2 4h24l-2-4v-4a10 10 0 0 0-10-10z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+            <path d="M20 35a4 4 0 0 0 8 0" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="tarjeta-funcion__titulo">Recordatorios inteligentes</h3>
+        <p class="tarjeta-funcion__texto">Avisos de medicamentos, citas y eventos.</p>
+      </article>
+
+      <article class="tarjeta-funcion">
+        <div class="tarjeta-funcion__icono tarjeta-funcion__icono--turquesa">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="20" fill="currentColor" opacity="0.12"/>
+            <rect x="11" y="16" width="18" height="16" rx="3" stroke="currentColor" stroke-width="2.4"/>
+            <path d="M29 21l8-4v14l-8-4" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+            <circle cx="20" cy="24" r="3" stroke="currentColor" stroke-width="2.2"/>
+          </svg>
+        </div>
+        <h3 class="tarjeta-funcion__titulo">Videollamadas familiares</h3>
+        <p class="tarjeta-funcion__texto">Mantener una conexión cercana con seres queridos.</p>
+      </article>
+
+      <article class="tarjeta-funcion">
+        <div class="tarjeta-funcion__icono tarjeta-funcion__icono--morado">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="20" fill="currentColor" opacity="0.12"/>
+            <path d="M14 30l6-8 5 5 9-11" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M28 16h6v6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 34h20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="tarjeta-funcion__titulo">Seguimiento del progreso</h3>
+        <p class="tarjeta-funcion__texto">Visualizar avances y hábitos diarios.</p>
+      </article>
+
+      <article class="tarjeta-funcion">
+        <div class="tarjeta-funcion__icono tarjeta-funcion__icono--azul">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="20" fill="currentColor" opacity="0.12"/>
+            <rect x="12" y="13" width="24" height="22" rx="3" stroke="currentColor" stroke-width="2.4"/>
+            <path d="M12 20h24" stroke="currentColor" stroke-width="2.4"/>
+            <path d="M17 10v6M31 10v6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="18" cy="26" r="1.6" fill="currentColor"/>
+            <circle cx="24" cy="26" r="1.6" fill="currentColor"/>
+            <circle cx="30" cy="26" r="1.6" fill="currentColor"/>
+            <circle cx="18" cy="31" r="1.6" fill="currentColor"/>
+            <circle cx="24" cy="31" r="1.6" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 class="tarjeta-funcion__titulo">Agenda personalizada</h3>
+        <p class="tarjeta-funcion__texto">Organización sencilla de actividades.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!--2. SECCIÓN BENEFICIOS-->
+<section class="beneficios" id="beneficios">
+  <div class="beneficios__container">
+
+    <div class="beneficios__ilustracion">
+      <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="beneficios__svg">
+        <circle cx="210" cy="200" r="190" fill="var(--color-fondo-suave)"/>
+        <ellipse cx="210" cy="368" rx="140" ry="16" fill="#E3DEF7"/>
+
+        <!-- alfombra -->
+        <ellipse cx="210" cy="345" rx="125" ry="20" fill="#F0D9DD"/>
+
+        <!-- sillón -->
+        <rect x="80" y="240" width="260" height="100" rx="26" fill="#F4D58D"/>
+        <rect x="66" y="215" width="34" height="115" rx="16" fill="#EFC468"/>
+        <rect x="320" y="215" width="34" height="115" rx="16" fill="#EFC468"/>
+        <rect x="80" y="225" width="260" height="28" rx="14" fill="#F8E3AC"/>
+
+        <!-- adulto mayor (izquierda) -->
+        <g>
+          <ellipse cx="172" cy="300" rx="34" ry="14" fill="#6B2E3A" opacity="0.25"/>
+          <rect x="148" y="225" width="20" height="56" rx="10" fill="#F2C9A0"/>
+          <rect x="184" y="225" width="20" height="56" rx="10" fill="#F2C9A0"/>
+          <rect x="142" y="205" width="64" height="92" rx="28" fill="#7B2E3B"/>
+          <path d="M146 248c8 10 44 10 56 0" stroke="#5E2230" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <circle cx="174" cy="182" r="27" fill="#F2C9A0"/>
+          <path d="M148 178c-3-22 11-38 27-38 17 0 31 14 28 34-3-10-14-16-27-16-14 0-25 7-28 20z" fill="#E7E7EA"/>
+          <path d="M150 168c6-4 14-6 24-6s18 2 24 6" stroke="#D8D8DC" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <circle cx="166" cy="186" r="2.2" fill="#5C3A21"/>
+          <circle cx="184" cy="186" r="2.2" fill="#5C3A21"/>
+          <path d="M167 196c3 2.5 8 2.5 11 0" stroke="#B5754F" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <!-- brazo hacia el familiar -->
+          <path d="M202 232c10 4 18 12 22 20" stroke="#7B2E3B" stroke-width="16" stroke-linecap="round"/>
+          <circle cx="227" cy="256" r="9" fill="#F2C9A0"/>
+        </g>
+
+        <!-- familiar (derecha) -->
+        <g>
+          <ellipse cx="252" cy="300" rx="32" ry="14" fill="#7A4A2B" opacity="0.2"/>
+          <rect x="232" y="222" width="18" height="54" rx="9" fill="#EFB48A"/>
+          <rect x="262" y="222" width="18" height="54" rx="9" fill="#EFB48A"/>
+          <rect x="224" y="198" width="58" height="88" rx="26" fill="#E8833A"/>
+          <circle cx="252" cy="176" r="25" fill="#EFB48A"/>
+          <path d="M227 168c2-20 22-26 25-26s23 6 25 26c-6-8-15-12-25-12s-19 4-25 12z" fill="#7A4A2B"/>
+          <circle cx="245" cy="180" r="2.1" fill="#4A2E1A"/>
+          <circle cx="261" cy="180" r="2.1" fill="#4A2E1A"/>
+          <path d="M246 190c2.5 2 7 2 9.5 0" stroke="#A8633A" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <!-- brazo hacia el adulto mayor -->
+          <path d="M226 228c-10 4-18 10-22 18" stroke="#E8833A" stroke-width="15" stroke-linecap="round"/>
+        </g>
+
+        <!-- corazón flotante -->
+        <path d="M210 120c-6-10-22-10-26 2-3 9 6 16 26 30 20-14 29-21 26-30-4-12-20-12-26-2z" fill="var(--color-morado)"/>
+      </svg>
+    </div>
+
+    <div class="beneficios__contenido">
+      <span class="etiqueta">Beneficios</span>
+      <h2 class="beneficios__titulo">Beneficios para toda la familia</h2>
+
+      <ul class="beneficios__lista">
+        <li class="beneficio-item">
+          <span class="beneficio-item__check">✓</span>
+          <span class="beneficio-item__texto">Mayor estimulación cognitiva.</span>
+        </li>
+        <li class="beneficio-item">
+          <span class="beneficio-item__check">✓</span>
+          <span class="beneficio-item__texto">Mejor comunicación familiar.</span>
+        </li>
+        <li class="beneficio-item">
+          <span class="beneficio-item__check">✓</span>
+          <span class="beneficio-item__texto">Más independencia para los adultos mayores.</span>
+        </li>
+        <li class="beneficio-item">
+          <span class="beneficio-item__check">✓</span>
+          <span class="beneficio-item__texto">Organización de medicamentos y actividades.</span>
+        </li>
+        <li class="beneficio-item">
+          <span class="beneficio-item__check">✓</span>
+          <span class="beneficio-item__texto">Seguimiento sencillo del bienestar.</span>
+        </li>
+        <li class="beneficio-item">
+          <span class="beneficio-item__check">✓</span>
+          <span class="beneficio-item__texto">Interfaz simple y accesible.</span>
+        </li>
+      </ul>
+
+      <div class="beneficios__estadistica">
+        <span class="beneficios__estadistica-numero">95%</span>
+        <span class="beneficios__estadistica-texto">de usuarios se sienten más conectados con sus familias.</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--3. SECCIÓN TESTIMONIOS-->
+<section class="testimonios" id="testimonios">
+  <div class="testimonios__container">
+    <div class="testimonios__encabezado">
+      <span class="etiqueta">Testimonios</span>
+      <h2 class="testimonios__titulo">Historias que nos inspiran</h2>
+      <p class="testimonios__subtitulo">Familias que han encontrado una forma más cercana de cuidar los recuerdos.</p>
+    </div>
+
+    <div class="testimonios__grid">
+
+      <article class="tarjeta-testimonio">
+        <div class="tarjeta-testimonio__estrellas" aria-label="Calificación 5 de 5 estrellas">★★★★★</div>
+        <p class="tarjeta-testimonio__comentario">"Hace que mi mamá recuerde sus actividades y nos mantiene más unidos."</p>
+        <div class="tarjeta-testimonio__autor">
+          <div class="tarjeta-testimonio__avatar tarjeta-testimonio__avatar--1">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <circle cx="32" cy="32" r="32" fill="#FFE0BD"/>
+              <path d="M32 44c11 0 19 7 19 18H13c0-11 8-18 19-18z" fill="#9B5DE5"/>
+              <circle cx="32" cy="27" r="13" fill="#F2BD8C"/>
+              <path d="M19 24c1-9 8-13 13-13s11 4 13 12c-4-2-9-3-13-3-5 0-10 1-13 4z" fill="#6B3F22"/>
+              <circle cx="27" cy="28" r="1.6" fill="#5C3A21"/>
+              <circle cx="37" cy="28" r="1.6" fill="#5C3A21"/>
+              <path d="M28 33c1.5 1.5 4.5 1.5 6 0" stroke="#A8633A" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <div>
+            <p class="tarjeta-testimonio__nombre">María Gómez</p>
+            <p class="tarjeta-testimonio__rol">Familiar cuidadora</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="tarjeta-testimonio">
+        <div class="tarjeta-testimonio__estrellas" aria-label="Calificación 5 de 5 estrellas">★★★★★</div>
+        <p class="tarjeta-testimonio__comentario">"Las videollamadas y recordatorios han sido de gran ayuda."</p>
+        <div class="tarjeta-testimonio__autor">
+          <div class="tarjeta-testimonio__avatar tarjeta-testimonio__avatar--2">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <circle cx="32" cy="32" r="32" fill="#C9EFEA"/>
+              <path d="M32 44c11 0 19 7 19 18H13c0-11 8-18 19-18z" fill="#1B2A6B"/>
+              <circle cx="32" cy="27" r="13" fill="#E0A877"/>
+              <path d="M19 22c2-7 7-10 13-10s11 3 13 10c-3-3-8-4-13-4s-10 1-13 4z" fill="#2E2E2E"/>
+              <path d="M19 24c-1 4 0 7 2 9" stroke="#2E2E2E" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M45 24c1 4 0 7-2 9" stroke="#2E2E2E" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <circle cx="27" cy="28" r="1.6" fill="#3A2415"/>
+              <circle cx="37" cy="28" r="1.6" fill="#3A2415"/>
+              <path d="M28 33c1.5 1.5 4.5 1.5 6 0" stroke="#9C6B45" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <div>
+            <p class="tarjeta-testimonio__nombre">Carlos Rodríguez</p>
+            <p class="tarjeta-testimonio__rol">Hijo de usuaria</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="tarjeta-testimonio">
+        <div class="tarjeta-testimonio__estrellas" aria-label="Calificación 5 de 5 estrellas">★★★★★</div>
+        <p class="tarjeta-testimonio__comentario">"La aplicación es muy sencilla y mi abuelo la usa todos los días."</p>
+        <div class="tarjeta-testimonio__autor">
+          <div class="tarjeta-testimonio__avatar tarjeta-testimonio__avatar--3">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <circle cx="32" cy="32" r="32" fill="#E3DEF7"/>
+              <path d="M32 44c11 0 19 7 19 18H13c0-11 8-18 19-18z" fill="#2BC4B6"/>
+              <circle cx="32" cy="27" r="13" fill="#D89A6A"/>
+              <path d="M19 26c0-9 6-15 13-15s13 6 13 15c0 2-1 3-1 3-2-6-6-9-12-9s-10 3-12 9c0 0-1-1-1-3z" fill="#4A2E1A"/>
+              <circle cx="27" cy="28" r="1.6" fill="#3A2110"/>
+              <circle cx="37" cy="28" r="1.6" fill="#3A2110"/>
+              <path d="M28 33c1.5 1.5 4.5 1.5 6 0" stroke="#8A4F2C" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <div>
+            <p class="tarjeta-testimonio__nombre">Ana Pérez</p>
+            <p class="tarjeta-testimonio__rol">Nieta de usuario</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!--4. SECCIÓN CONTÁCTANOS-->
+<section class="contacto" id="contacto">
+  <div class="contacto__container">
+
+    <div class="contacto__info">
+      <span class="etiqueta etiqueta--clara">Contáctanos</span>
+      <h2 class="contacto__titulo">¿Tienes dudas? Estamos aquí para ayudarte</h2>
+      <p class="contacto__texto">Nuestro equipo está listo para resolver tus preguntas sobre MemoCare y ayudarte a acompañar a tu familia en cada recuerdo.</p>
+
+      <ul class="contacto__datos">
+        <li class="contacto__dato">
+          <span class="contacto__dato-icono">📧</span>
+          <span>contacto@memocare.com</span>
+        </li>
+        <li class="contacto__dato">
+          <span class="contacto__dato-icono">📱</span>
+          <span>+51 992 947 692</span>
+        </li>
+        <li class="contacto__dato">
+          <span class="contacto__dato-icono">📍</span>
+          <span>Santiago de Surco, Lima, Perú</span>
+        </li>
+      </ul>
+
+      <div class="contacto__redes">
+        <a href="#" class="contacto__red" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v7h4v-7h3l1-4h-4V9c0-.6.4-1 1-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#" class="contacto__red" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+        </a>
+        <a href="#" class="contacto__red" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 9.5c0 4 2.5 6.5 6.5 6.5l1-1.8-2.5-1-1 1c-1.3-.6-2.2-1.5-2.8-2.8l1-1-1-2.5-1.2 1z" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <form class="contacto__formulario" id="formulario-contacto" novalidate>
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+        <span class="campo__mensaje-error" data-error-para="nombre">Por favor escribe tu nombre.</span>
+      </div>
+      <div class="campo">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+        <span class="campo__mensaje-error" data-error-para="correo">Ingresa un correo electrónico válido.</span>
+      </div>
+      <div class="campo">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+        <span class="campo__mensaje-error" data-error-para="mensaje">Por favor escribe tu mensaje.</span>
+      </div>
+      <button type="submit" class="boton boton--morado boton--ancho">Enviar mensaje</button>
+      <p class="contacto__formulario-feedback" id="formulario-feedback" role="status">¡Mensaje enviado! Te responderemos pronto.</p>
+    </form>
+
+  </div>
+</section>
+
+<!--5. FOOTER-->
+<footer class="pie">
+  <div class="pie__container">
+
+    <div class="pie__marca">
+      <div class="pie__logo">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M20 4c8.8 0 16 7.2 16 16s-7.2 16-16 16C13 36 7 31.5 5 25c-1.3-4 1-7 4.5-7 2.5 0 4 1.8 4.5 4.2 1 4.5 4 7.3 8.3 7.3 5.3 0 9.7-4.3 9.7-9.5S26.6 10.5 21.3 10.5c-1.6 0-3.1.4-4.4 1.1C18.7 8 21 4 20 4z" fill="var(--color-turquesa)"/>
+          <circle cx="13.5" cy="17.5" r="2.1" fill="var(--color-azul-oscuro)"/>
+        </svg>
+        <span>MemoCare</span>
+      </div>
+      <p class="pie__descripcion">Cuidando recuerdos, acompañando vidas. La app que conecta a los adultos mayores con sus familias.</p>
+      <div class="pie__redes">
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v7h4v-7h3l1-4h-4V9c0-.6.4-1 1-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+        </a>
+        <a href="#" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 9.5c0 4 2.5 6.5 6.5 6.5l1-1.8-2.5-1-1 1c-1.3-.6-2.2-1.5-2.8-2.8l1-1-1-2.5-1.2 1z" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <nav class="pie__enlaces" aria-label="Enlaces rápidos">
+      <h3>Enlaces rápidos</h3>
+      <a href="#">Inicio</a>
+      <a href="#funciones">Funciones</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#contacto">Contáctanos</a>
+    </nav>
+
+  </div>
+
+  <div class="pie__copyright">
+    <p>© 2026 MemoCare. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
