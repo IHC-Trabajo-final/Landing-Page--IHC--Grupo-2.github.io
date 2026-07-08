@@ -1,0 +1,518 @@
+/* DASHBOARD-ADULTO.CSS
+   Estilos específicos del "Resumen de Hoy" en Modo Adulto Mayor.
+   Reutiliza las variables de color, radios y sombras definidas
+   en styles.css, y el layout general (sidebar, columna, footer,
+   modal) definido en dashboard.css. Aquí solo se agregan los
+   tokens y componentes propios de esta pantalla. */
+
+:root {
+  --color-lavanda: #8E7CF0;
+  --color-lavanda-suave: #EFEBFD;
+  --color-exito: var(--color-turquesa);
+  --color-exito-fondo: var(--color-turquesa-suave);
+}
+
+/* ---------------------------------------------------------------
+   ENCABEZADO DEL RESUMEN
+--------------------------------------------------------------- */
+
+.resumen__encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.resumen__encabezado > div:first-child {
+  flex: 1 1 420px;
+  min-width: 280px;
+}
+
+.resumen__encabezado .boton {
+  flex-shrink: 0;
+}
+
+.resumen__fecha {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-turquesa);
+  margin-bottom: 6px;
+}
+
+.resumen__titulo {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--color-azul-oscuro);
+  margin-bottom: 8px;
+}
+
+.resumen__subtitulo {
+  color: var(--color-texto-suave);
+  font-size: 1rem;
+  line-height: 1.55;
+  max-width: 580px;
+}
+
+/* ---------------------------------------------------------------
+   FILA PRINCIPAL: BIENESTAR + VITALES
+--------------------------------------------------------------- */
+
+.resumen__fila-principal {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+/*TARJETA: BIENESTAR GENERAL*/
+.tarjeta-bienestar {
+  background: linear-gradient(120deg, var(--color-turquesa-suave) 0%, var(--color-fondo-claro) 55%, var(--color-morado-suave) 100%);
+  border-radius: var(--radio-grande);
+  padding: 28px;
+  box-shadow: var(--sombra-suave);
+}
+
+.tarjeta-bienestar__titulo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-azul-oscuro);
+  margin-bottom: 10px;
+}
+
+.tarjeta-bienestar__texto {
+  font-size: 0.94rem;
+  color: var(--color-texto-suave);
+  line-height: 1.6;
+  max-width: 480px;
+  margin-bottom: 24px;
+}
+
+.tarjeta-bienestar__cuerpo {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.tarjeta-bienestar__puntuacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.tarjeta-bienestar__numero {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-turquesa);
+}
+
+.tarjeta-bienestar__etiqueta {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--color-morado-oscuro);
+  margin-top: 4px;
+}
+
+.tarjeta-bienestar__detalles {
+  display: flex;
+  gap: 14px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.detalle-bienestar {
+  background-color: var(--color-blanco);
+  border-radius: var(--radio-medio);
+  padding: 14px 20px;
+  box-shadow: var(--sombra-suave);
+  min-width: 130px;
+}
+
+.detalle-bienestar__titulo {
+  font-size: 0.78rem;
+  color: var(--color-texto-suave);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.detalle-bienestar__valor {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-azul-oscuro);
+}
+
+/*TARJETA: SINCRONIZACIÓN DE VITALES*/
+.tarjeta-vitales {
+  background-color: var(--color-morado);
+  border-radius: var(--radio-grande);
+  padding: 28px;
+  box-shadow: var(--sombra-morada);
+  display: flex;
+  flex-direction: column;
+  color: var(--color-blanco);
+}
+
+.tarjeta-vitales__titulo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.tarjeta-vitales__actualizado {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 18px;
+}
+
+.tarjeta-vitales__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.vital-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.vital-item:last-child {
+  border-bottom: none;
+}
+
+.vital-item__icono {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.vital-item__icono svg {
+  width: 17px;
+  height: 17px;
+}
+
+.vital-item__nombre {
+  font-size: 0.92rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+.vital-item__valor {
+  font-size: 0.98rem;
+  font-weight: 800;
+}
+
+.tarjeta-vitales__boton {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.16);
+  color: var(--color-blanco);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px;
+  border-radius: var(--radio-medio);
+  transition: var(--transicion);
+}
+
+.tarjeta-vitales__boton:hover {
+  background-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-2px);
+}
+
+/* ---------------------------------------------------------------
+   GRID SECUNDARIO: MEDICACIÓN / ACTIVIDAD / JUEGOS
+--------------------------------------------------------------- */
+
+.resumen__grid-secundario {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.tarjeta-secundaria {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-grande);
+  padding: 24px;
+  box-shadow: var(--sombra-suave);
+  transition: var(--transicion);
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-secundaria:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-media);
+  border-color: transparent;
+}
+
+.tarjeta-secundaria__encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.tarjeta-secundaria__icono {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tarjeta-secundaria__icono svg { width: 22px; height: 22px; }
+
+.tarjeta-secundaria__icono--turquesa { background-color: var(--color-turquesa); }
+.tarjeta-secundaria__icono--morado   { background-color: var(--color-morado); }
+.tarjeta-secundaria__icono--lavanda  { background-color: var(--color-lavanda); }
+
+.tarjeta-secundaria__titulo {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--color-azul-oscuro);
+  margin-bottom: 8px;
+}
+
+.tarjeta-secundaria__texto {
+  font-size: 0.88rem;
+  color: var(--color-texto-suave);
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+/*ETIQUETAS DE LAS TARJETAS SECUNDARIAS*/
+.etiqueta-secundaria {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.etiqueta-secundaria--exito {
+  color: var(--color-exito);
+  background-color: var(--color-exito-fondo);
+}
+
+.etiqueta-secundaria--morada {
+  color: var(--color-morado-oscuro);
+  background-color: var(--color-morado-suave);
+}
+
+/*CHECKLIST — ADHERENCIA A LA MEDICACIÓN*/
+.lista-check {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.lista-check__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+.lista-check__item svg {
+  width: 19px;
+  height: 19px;
+  color: var(--color-turquesa);
+  flex-shrink: 0;
+}
+
+/*BARRA DE ACTIVIDAD FÍSICA*/
+.barra-actividad {
+  height: 9px;
+  border-radius: 999px;
+  background-color: var(--color-fondo-suave);
+  overflow: hidden;
+  margin-bottom: 10px;
+  margin-top: auto;
+}
+
+.barra-actividad__progreso {
+  height: 100%;
+  border-radius: 999px;
+  background-color: var(--color-morado);
+}
+
+.barra-actividad__pie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-texto-suave);
+}
+
+/*MINI JUEGO — JUEGOS COGNITIVOS*/
+.mini-juego {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: var(--color-fondo-claro);
+  border-radius: var(--radio-medio);
+  padding: 12px 16px;
+  margin-top: auto;
+}
+
+.mini-juego__icono {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--color-lavanda-suave);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.mini-juego__nombre {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-azul-oscuro);
+}
+
+.mini-juego__detalle {
+  font-size: 0.78rem;
+  color: var(--color-texto-suave);
+}
+
+/* ---------------------------------------------------------------
+   MODAL: REGISTRAR ACTUALIZACIÓN (filas de dos campos)
+--------------------------------------------------------------- */
+
+.tarjeta-formulario__fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ---------------------------------------------------------------
+   MODAL: TENDENCIAS DE VITALES
+--------------------------------------------------------------- */
+
+#modal-tendencias .modal-paciente__caja {
+  max-width: 480px;
+}
+
+.modal-tendencias__actualizado {
+  font-size: 0.85rem;
+  color: var(--color-texto-suave);
+  margin-bottom: 22px;
+  margin-top: -12px;
+}
+
+.modal-tendencias__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tendencia-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: var(--color-fondo-claro);
+  border-radius: var(--radio-medio);
+  padding: 14px 16px;
+}
+
+.tendencia-item__icono {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--color-turquesa-suave);
+  color: var(--color-turquesa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tendencia-item__icono svg { width: 19px; height: 19px; }
+
+.tendencia-item__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.tendencia-item__nombre {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-azul-oscuro);
+}
+
+.tendencia-item__estado {
+  font-size: 0.78rem;
+  color: var(--color-texto-suave);
+}
+
+.tendencia-item__valor {
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--color-azul-oscuro);
+  flex-shrink: 0;
+}
+
+/* ---------------------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------------------- */
+
+@media (max-width: 1080px) {
+  .resumen__fila-principal {
+    grid-template-columns: 1fr;
+  }
+
+  .resumen__grid-secundario {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .resumen__encabezado {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .resumen__encabezado .boton {
+    width: 100%;
+  }
+
+  .resumen__grid-secundario {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta-formulario__fila {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta-bienestar__cuerpo {
+    gap: 18px;
+  }
+}

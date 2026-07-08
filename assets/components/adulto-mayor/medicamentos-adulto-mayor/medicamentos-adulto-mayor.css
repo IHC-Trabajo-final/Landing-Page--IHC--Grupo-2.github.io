@@ -1,0 +1,258 @@
+.medicamentos__grid {
+    display: grid;
+    grid-template-columns: 58% 42%;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+
+.referencia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.referencia__imagen {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radio-grande);
+  overflow: hidden;
+  box-shadow: var(--sombra-media);
+  margin: 0 auto;
+}
+
+.referencia__imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+
+.referencia__etiqueta {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-morado);
+  color: var(--color-blanco);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 8px 16px;
+  border-radius: 999px;
+}
+
+.referencia__etiqueta svg { width: 16px; height: 16px; }
+
+.referencia__ayuda {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  color: var(--color-texto-suave);
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.referencia__ayuda svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+
+.instrucciones {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-grande);
+  padding: 28px;
+  box-shadow: var(--sombra-suave);
+}
+
+.instrucciones__hora {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-morado);
+  font-weight: 700;
+  font-size: 0.92rem;
+  margin-bottom: 14px;
+}
+
+.instrucciones__hora svg { width: 18px; height: 18px; }
+
+.instrucciones__titulo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-azul-oscuro);
+  margin-bottom: 8px;
+}
+
+.instrucciones__subtitulo {
+  color: var(--color-texto-suave);
+  font-size: 0.96rem;
+  line-height: 1.55;
+  margin-bottom: 24px;
+}
+
+
+.pasos {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.pasos__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background-color: var(--color-fondo-claro);
+  border-radius: var(--radio-medio);
+  padding: 16px 18px;
+}
+
+.pasos__numero {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-morado);
+  color: var(--color-blanco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.pasos__item:nth-child(2) .pasos__numero {
+  background-color: var(--color-turquesa);
+}
+
+.pasos__item:nth-child(3) .pasos__numero {
+  background-color: var(--color-morado);
+}
+
+.pasos__titulo {
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--color-azul-oscuro);
+  margin-bottom: 3px;
+}
+
+.pasos__detalle {
+  font-size: 0.88rem;
+  color: var(--color-texto-suave);
+  line-height: 1.5;
+}
+
+
+.instrucciones .boton {
+  margin-bottom: 14px;
+}
+
+.instrucciones .boton:last-of-type {
+  margin-bottom: 20px;
+}
+
+.instrucciones .boton--morado.es-confirmado {
+  background-color: var(--color-estado-estable, #2DAA5E);
+  box-shadow: none;
+  cursor: default;
+}
+
+.instrucciones .boton--morado.es-confirmado:hover {
+  background-color: var(--color-estado-estable, #2DAA5E);
+  transform: none;
+}
+
+
+.instrucciones__aviso {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: var(--color-turquesa-suave);
+  border-radius: var(--radio-medio);
+  padding: 16px 18px;
+  font-size: 0.86rem;
+  color: var(--color-azul-oscuro);
+  line-height: 1.5;
+}
+
+.instrucciones__aviso-avatar {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-turquesa);
+  color: var(--color-blanco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+
+.notificacion {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  max-width: 90%;
+  background-color: var(--color-azul-oscuro);
+  color: var(--color-blanco);
+  border-radius: var(--radio-medio);
+  padding: 16px 22px;
+  box-shadow: var(--sombra-media);
+  z-index: 300;
+  opacity: 0;
+  transition: var(--transicion);
+}
+
+.notificacion.es-visible {
+  display: flex;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.notificacion__icono {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-turquesa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.notificacion__texto {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+
+@media (max-width: 860px) {
+  .medicamentos__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .instrucciones {
+    padding: 22px 18px;
+  }
+
+  .notificacion {
+    bottom: 16px;
+    padding: 14px 18px;
+  }
+}

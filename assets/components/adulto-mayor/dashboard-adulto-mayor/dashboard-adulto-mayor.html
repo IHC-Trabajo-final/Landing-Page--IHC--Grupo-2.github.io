@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MemoCare — Resumen de Hoy</title>
+<link rel="icon" href="../../../favicon.ico">
+<link rel="stylesheet" href="../../../styles/styles.css">
+<link rel="stylesheet" href="../../cuidador/dashboard-cuidador/dashboard.css">
+<link rel="stylesheet" href="./dashboard-adulto-mayor.css">
+</head>
+<body>
+
+<div class="panel-cuidador">
+
+  <aside class="barra-lateral">
+
+    <div class="barra-lateral__marca">
+      <span class="barra-lateral__nombre">MemoCare</span>
+      <span class="barra-lateral__subtitulo">Modo Adulto Mayor</span>
+    </div>
+
+    <nav class="barra-lateral__nav" aria-label="Navegación del panel">
+      <a href="./dashboard-adulto-mayor.html" class="barra-lateral__enlace barra-lateral__enlace--activo">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11.5L12 4l8 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Inicio
+      </a>
+      <a href="../medicamentos-adulto-mayor/medicamentos-adulto-mayor.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="9" width="16" height="8" rx="4" transform="rotate(-45 12 13)" stroke="currentColor" stroke-width="2"/><path d="M9.5 16.5l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Medicamentos
+      </a>
+      <a href="../rutina-adulto-mayor/rutina-adulto-mayor.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M4 9.5h16" stroke="currentColor" stroke-width="2"/><path d="M8 3v3M16 3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Rutinas Diarias
+      </a>
+      <a href="../recordatorios-adulto-mayor/recordatorios-adulto-mayor.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 16v-5a6 6 0 1 0-12 0v5l-2 3h16l-2-3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 20a2 2 0 0 0 4 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Recordatorios
+      </a>
+      <a href="../familiares/familiares.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="2"/><path d="M3 19c1-4 3-6 6-6s5 2 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="9" r="2.4" stroke="currentColor" stroke-width="2"/><path d="M15.5 19c.6-2.8 2-4.3 3.5-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Familiares
+      </a>
+    </nav>
+
+    <div class="barra-lateral__perfil">
+      <div class="barra-lateral__perfil-avatar">DC</div>
+      <div>
+        <p class="barra-lateral__perfil-nombre">Doña Carmen</p>
+        <p class="barra-lateral__perfil-rol">Adulto Mayor</p>
+      </div>
+    </div>
+
+  </aside>
+
+  <div class="columna-principal">
+
+  <main class="contenido">
+
+    <div class="resumen__encabezado">
+      <div>
+        <p class="resumen__fecha">JUEVES, 24 DE OCTUBRE</p>
+        <h1 class="resumen__titulo">Resumen de Hoy: Doña Carmen</h1>
+        <p class="resumen__subtitulo">Un día tranquilo enfocado en ejercicios de memoria y actividad suave. Todos los indicadores están dentro de los rangos óptimos.</p>
+      </div>
+      <button class="boton boton--morado" type="button" id="boton-registrar-actualizacion" aria-haspopup="dialog" aria-controls="modal-actualizacion">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="boton__icono"><path d="M12 5v14M5 12h14" stroke="white" stroke-width="2.2" stroke-linecap="round"/></svg>
+        Registrar Actualización
+      </button>
+    </div>
+
+    <div class="resumen__fila-principal">
+
+      <section class="tarjeta-bienestar">
+        <h2 class="tarjeta-bienestar__titulo">Puntuación de Bienestar General</h2>
+        <p class="tarjeta-bienestar__texto">Doña Carmen se siente excepcionalmente sociable hoy. Su puntuación de interacción mejoró un 12% tras la visita matutina de sus nietos.</p>
+
+        <div class="tarjeta-bienestar__cuerpo">
+          <div class="tarjeta-bienestar__puntuacion">
+            <span class="tarjeta-bienestar__numero">85</span>
+            <span class="tarjeta-bienestar__etiqueta">GRAN DÍA</span>
+          </div>
+
+          <div class="tarjeta-bienestar__detalles">
+            <div class="detalle-bienestar">
+              <p class="detalle-bienestar__titulo">Ánimo</p>
+              <p class="detalle-bienestar__valor">😊 Alegre</p>
+            </div>
+            <div class="detalle-bienestar">
+              <p class="detalle-bienestar__titulo">Descanso</p>
+              <p class="detalle-bienestar__valor">🌙 8h 12m</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tarjeta-vitales">
+        <h2 class="tarjeta-vitales__titulo">Sincronización de Vitales</h2>
+        <p class="tarjeta-vitales__actualizado" id="vitales-actualizado">Actualizado hace 14 min vía Smart Band</p>
+
+        <ul class="tarjeta-vitales__lista" id="vitales-resumen">
+          <li class="vital-item">
+            <span class="vital-item__icono">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20s-7-4.3-9.3-8.6A5 5 0 0 1 12 6a5 5 0 0 1 9.3 5.4C19 15.7 12 20 12 20z" stroke="white" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="vital-item__nombre">Ritmo Cardíaco</span>
+            <span class="vital-item__valor" id="valor-ritmo">72 BPM</span>
+          </li>
+          <li class="vital-item">
+            <span class="vital-item__icono">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="13" r="7" stroke="white" stroke-width="1.8"/><path d="M12 13l3-3" stroke="white" stroke-width="1.8" stroke-linecap="round"/><path d="M9 4h6" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <span class="vital-item__nombre">Presión Arterial</span>
+            <span class="vital-item__valor" id="valor-presion">118/75</span>
+          </li>
+          <li class="vital-item">
+            <span class="vital-item__icono">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M11 14.5V6a1 1 0 1 1 2 0v8.5a3 3 0 1 1-2 0z" stroke="white" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="vital-item__nombre">Temp.</span>
+            <span class="vital-item__valor" id="valor-temp">36.6°C</span>
+          </li>
+        </ul>
+
+        <button class="tarjeta-vitales__boton" type="button" id="boton-ver-tendencias" aria-haspopup="dialog" aria-controls="modal-tendencias">Ver Tendencias</button>
+      </section>
+
+    </div>
+
+    <div class="resumen__grid-secundario">
+
+      <article class="tarjeta-secundaria">
+        <div class="tarjeta-secundaria__encabezado">
+          <span class="tarjeta-secundaria__icono tarjeta-secundaria__icono--turquesa">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="9" width="16" height="8" rx="4" transform="rotate(-45 12 13)" stroke="white" stroke-width="2"/><path d="M9.5 16.5l7-7" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <span class="etiqueta-secundaria etiqueta-secundaria--exito">100% HOY</span>
+        </div>
+        <h3 class="tarjeta-secundaria__titulo">Adherencia a la Medicación</h3>
+        <p class="tarjeta-secundaria__texto">Las 4 dosis programadas para hoy han sido confirmadas.</p>
+        <ul class="lista-check">
+          <li class="lista-check__item">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 12.5l2.2 2.2 4.8-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Pack de Vitaminas Mañana
+          </li>
+          <li class="lista-check__item">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 12.5l2.2 2.2 4.8-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Pastilla Presión Almuerzo
+          </li>
+          <li class="lista-check__item">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 12.5l2.2 2.2 4.8-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Magnesio Noche
+          </li>
+        </ul>
+      </article>
+
+      <article class="tarjeta-secundaria">
+        <div class="tarjeta-secundaria__encabezado">
+          <span class="tarjeta-secundaria__icono tarjeta-secundaria__icono--morado">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="5" r="2" stroke="white" stroke-width="2"/><path d="M12 8v5l-3 7M12 13l3 7M9 12l-3 2M15 12l3 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="etiqueta-secundaria etiqueta-secundaria--morada">ACTIVO</span>
+        </div>
+        <h3 class="tarjeta-secundaria__titulo">Actividad Física</h3>
+        <p class="tarjeta-secundaria__texto">4,250 pasos realizados. Un paseo por el jardín de 20 minutos completado a las 10:30 AM.</p>
+        <div class="barra-actividad">
+          <div class="barra-actividad__progreso" style="width: 70%;"></div>
+        </div>
+        <div class="barra-actividad__pie">
+          <span>70% DE LA META DIARIA</span>
+          <span>1,750 RESTANTES</span>
+        </div>
+      </article>
+
+      <article class="tarjeta-secundaria">
+        <div class="tarjeta-secundaria__encabezado">
+          <span class="tarjeta-secundaria__icono tarjeta-secundaria__icono--lavanda">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="white" stroke-width="2"/><path d="M12 8v4l2.5 2.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="etiqueta-secundaria etiqueta-secundaria--exito">+150 XP</span>
+        </div>
+        <h3 class="tarjeta-secundaria__titulo">Juegos Cognitivos</h3>
+        <p class="tarjeta-secundaria__texto">¡Excelente enfoque hoy! Se superó la puntuación más alta en Memory Match.</p>
+        <div class="mini-juego">
+          <span class="mini-juego__icono">🧩</span>
+          <div>
+            <p class="mini-juego__nombre">Emparejar Memoria</p>
+            <p class="mini-juego__detalle">Nivel 12 • hace 4 min</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </main>
+
+    <footer class="pie-dashboard">
+      <p>© 2026 MemoCare - Cuidado Cognitivo con Empatía</p>
+      <nav class="pie-dashboard__enlaces" aria-label="Enlaces del pie de página">
+        <a href="#">Soporte</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Contacto</a>
+        <a href="#">Términos</a>
+      </nav>
+    </footer>
+
+  </div>
+
+</div>
+
+<div class="modal-paciente" id="modal-actualizacion" aria-hidden="true">
+  <div class="modal-paciente__overlay" data-cerrar-modal-actualizacion></div>
+
+  <div class="modal-paciente__caja" role="dialog" aria-modal="true" aria-labelledby="modal-actualizacion-titulo">
+    <button class="modal-paciente__cerrar" type="button" aria-label="Cerrar" data-cerrar-modal-actualizacion>✕</button>
+
+    <h2 class="modal-paciente__titulo" id="modal-actualizacion-titulo">Registrar Actualización</h2>
+
+    <form class="modal-paciente__formulario" id="formulario-actualizacion" novalidate>
+      <div class="tarjeta-formulario__fila">
+        <div class="campo">
+          <label for="actualizacion-ritmo">Ritmo Cardíaco (BPM)</label>
+          <input type="number" id="actualizacion-ritmo" name="ritmo" min="30" max="220" required>
+          <span class="campo__mensaje-error" data-error-para="actualizacion-ritmo">Ingresa un valor entre 30 y 220.</span>
+        </div>
+        <div class="campo">
+          <label for="actualizacion-presion">Presión Arterial</label>
+          <input type="text" id="actualizacion-presion" name="presion" placeholder="Ej. 118/75" pattern="^\d{2,3}\/\d{2,3}$" required>
+          <span class="campo__mensaje-error" data-error-para="actualizacion-presion">Usa el formato sistólica/diastólica, ej. 118/75.</span>
+        </div>
+      </div>
+
+      <div class="tarjeta-formulario__fila">
+        <div class="campo">
+          <label for="actualizacion-temp">Temperatura (°C)</label>
+          <input type="number" id="actualizacion-temp" name="temp" step="0.1" min="34" max="42" required>
+          <span class="campo__mensaje-error" data-error-para="actualizacion-temp">Ingresa un valor entre 34 y 42.</span>
+        </div>
+        <div class="campo">
+          <label for="actualizacion-oxigeno">Saturación de Oxígeno (%)</label>
+          <input type="number" id="actualizacion-oxigeno" name="oxigeno" min="70" max="100" required>
+          <span class="campo__mensaje-error" data-error-para="actualizacion-oxigeno">Ingresa un valor entre 70 y 100.</span>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="actualizacion-peso">Peso (kg)</label>
+        <input type="number" id="actualizacion-peso" name="peso" step="0.1" min="30" max="200" required>
+        <span class="campo__mensaje-error" data-error-para="actualizacion-peso">Ingresa un peso válido en kg.</span>
+      </div>
+
+      <button type="submit" class="boton boton--morado boton--ancho">Guardar Actualización</button>
+      <p class="modal-paciente__feedback" id="actualizacion-feedback" role="status">¡Vitales actualizados correctamente!</p>
+    </form>
+  </div>
+</div>
+
+<div class="modal-paciente" id="modal-tendencias" aria-hidden="true">
+  <div class="modal-paciente__overlay" data-cerrar-modal-tendencias></div>
+
+  <div class="modal-paciente__caja" role="dialog" aria-modal="true" aria-labelledby="modal-tendencias-titulo">
+    <button class="modal-paciente__cerrar" type="button" aria-label="Cerrar" data-cerrar-modal-tendencias>✕</button>
+
+    <h2 class="modal-paciente__titulo" id="modal-tendencias-titulo">Tendencias de Vitales</h2>
+    <p class="modal-tendencias__actualizado" id="tendencias-actualizado">Actualizado hace 14 min vía Smart Band</p>
+
+    <ul class="modal-tendencias__lista" id="tendencias-lista">
+      <li class="tendencia-item">
+        <span class="tendencia-item__icono">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20s-7-4.3-9.3-8.6A5 5 0 0 1 12 6a5 5 0 0 1 9.3 5.4C19 15.7 12 20 12 20z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </span>
+        <div class="tendencia-item__info">
+          <p class="tendencia-item__nombre">Ritmo Cardíaco</p>
+          <p class="tendencia-item__estado">Dentro del rango normal (60-100 BPM)</p>
+        </div>
+        <span class="tendencia-item__valor" id="tendencia-ritmo">72 BPM</span>
+      </li>
+      <li class="tendencia-item">
+        <span class="tendencia-item__icono">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="13" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M12 13l3-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 4h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <div class="tendencia-item__info">
+          <p class="tendencia-item__nombre">Presión Arterial</p>
+          <p class="tendencia-item__estado">Óptima para su edad</p>
+        </div>
+        <span class="tendencia-item__valor" id="tendencia-presion">118/75</span>
+      </li>
+      <li class="tendencia-item">
+        <span class="tendencia-item__icono">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M11 14.5V6a1 1 0 1 1 2 0v8.5a3 3 0 1 1-2 0z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </span>
+        <div class="tendencia-item__info">
+          <p class="tendencia-item__nombre">Temperatura</p>
+          <p class="tendencia-item__estado">Sin signos de fiebre</p>
+        </div>
+        <span class="tendencia-item__valor" id="tendencia-temp">36.6°C</span>
+      </li>
+      <li class="tendencia-item">
+        <span class="tendencia-item__icono">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3s5 5.5 5 9.5a5 5 0 1 1-10 0C7 8.5 12 3 12 3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </span>
+        <div class="tendencia-item__info">
+          <p class="tendencia-item__nombre">Saturación de Oxígeno</p>
+          <p class="tendencia-item__estado">Buena oxigenación (≥95%)</p>
+        </div>
+        <span class="tendencia-item__valor" id="tendencia-oxigeno">97%</span>
+      </li>
+      <li class="tendencia-item">
+        <span class="tendencia-item__icono">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="3" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="6" r="2.4" stroke="currentColor" stroke-width="1.8"/></svg>
+        </span>
+        <div class="tendencia-item__info">
+          <p class="tendencia-item__nombre">Peso</p>
+          <p class="tendencia-item__estado">Estable respecto al mes pasado</p>
+        </div>
+        <span class="tendencia-item__valor" id="tendencia-peso">68 kg</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script src="./dashboard-adulto-mayor.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MemoCare — Familiares</title>
+<link rel="icon" href="../../../favicon.ico">
+<link rel="stylesheet" href="../../../styles/styles.css">
+<link rel="stylesheet" href="../../cuidador/dashboard-cuidador/dashboard.css">
+<link rel="stylesheet" href="./familiares.css">
+</head>
+<body>
+
+<div class="panel-cuidador">
+
+  <aside class="barra-lateral">
+
+    <div class="barra-lateral__marca">
+      <span class="barra-lateral__nombre">MemoCare</span>
+      <span class="barra-lateral__subtitulo">Modo Adulto Mayor</span>
+    </div>
+
+    <nav class="barra-lateral__nav" aria-label="Navegación del panel">
+      <a href="../dashboard-adulto-mayor/dashboard-adulto-mayor.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11.5L12 4l8 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Inicio
+      </a>
+      <a href="../medicamentos-adulto-mayor/medicamentos-adulto-mayor.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="9" width="16" height="8" rx="4" transform="rotate(-45 12 13)" stroke="currentColor" stroke-width="2"/><path d="M9.5 16.5l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Medicamentos
+      </a>
+      <a href="../rutina-adulto-mayor/rutina-adulto-mayor.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M4 9.5h16" stroke="currentColor" stroke-width="2"/><path d="M8 3v3M16 3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Rutinas Diarias
+      </a>
+      <a href="../recordatorios-adulto-mayor/recordatorios-adulto-mayor.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 16v-5a6 6 0 1 0-12 0v5l-2 3h16l-2-3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 20a2 2 0 0 0 4 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Recordatorios
+      </a>
+      <a href="./familiares.html" class="barra-lateral__enlace barra-lateral__enlace--activo">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="2"/><path d="M3 19c1-4 3-6 6-6s5 2 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="9" r="2.4" stroke="currentColor" stroke-width="2"/><path d="M15.5 19c.6-2.8 2-4.3 3.5-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Familiares
+      </a>
+    </nav>
+
+    <div class="barra-lateral__perfil">
+      <div class="barra-lateral__perfil-avatar">DC</div>
+      <div>
+        <p class="barra-lateral__perfil-nombre">Doña Carmen</p>
+        <p class="barra-lateral__perfil-rol">Adulto Mayor</p>
+      </div>
+    </div>
+
+  </aside>
+
+  <div class="columna-principal">
+
+  <main class="contenido">
+
+    <section class="familiares__encabezado">
+      <div class="familiares__encabezado-texto">
+        <h1 class="familiares__titulo">Familiares</h1>
+        <p class="familiares__subtitulo">Las personas que más te quieren, siempre a un toque de distancia.</p>
+      </div>
+      <button class="boton boton--morado familiares__boton-ayuda" type="button" id="boton-solicitar-ayuda">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="boton__icono"><path d="M12 20.5s-7.5-4.6-9.5-9.2C1.1 8 2.6 4.8 5.8 4.1c2-.4 3.9.5 5.1 2.1a5.7 5.7 0 0 1 1.1 1.6 5.7 5.7 0 0 1 1.1-1.6c1.2-1.6 3.1-2.5 5.1-2.1 3.2.7 4.7 3.9 3.3 7.2-2 4.6-9.5 9.2-9.5 9.2z" stroke="white" stroke-width="2" stroke-linejoin="round"/></svg>
+        Solicitar Ayuda
+      </button>
+    </section>
+
+    <section class="familiares__seccion">
+      <h2 class="familiares__titulo-seccion">Tu Familia</h2>
+
+      <div class="familiares__grid" id="familiares-grid">
+
+        <article class="tarjeta-familiar">
+          <span class="tarjeta-familiar__estado tarjeta-familiar__estado--disponible">Disponible</span>
+          <div class="tarjeta-familiar__avatar tarjeta-familiar__avatar--morado">MG</div>
+          <h3 class="tarjeta-familiar__nombre">María González</h3>
+          <p class="tarjeta-familiar__relacion">Tu hija</p>
+          <button class="boton boton--contorno boton--ancho boton-llamar" type="button" data-nombre="María González" data-relacion="Tu hija" data-iniciales="MG">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="boton__icono"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1v3.5c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.7c0-.6.4-1 1-1H7.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            Llamar
+          </button>
+        </article>
+
+        <article class="tarjeta-familiar">
+          <span class="tarjeta-familiar__estado tarjeta-familiar__estado--disponible">Disponible</span>
+          <div class="tarjeta-familiar__avatar tarjeta-familiar__avatar--turquesa">CG</div>
+          <h3 class="tarjeta-familiar__nombre">Carlos González</h3>
+          <p class="tarjeta-familiar__relacion">Tu hijo</p>
+          <button class="boton boton--contorno boton--ancho boton-llamar" type="button" data-nombre="Carlos González" data-relacion="Tu hijo" data-iniciales="CG">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="boton__icono"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1v3.5c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.7c0-.6.4-1 1-1H7.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            Llamar
+          </button>
+        </article>
+
+        <article class="tarjeta-familiar">
+          <span class="tarjeta-familiar__estado tarjeta-familiar__estado--ocupado">Ocupado</span>
+          <div class="tarjeta-familiar__avatar tarjeta-familiar__avatar--verde">AP</div>
+          <h3 class="tarjeta-familiar__nombre">Ana Pérez</h3>
+          <p class="tarjeta-familiar__relacion">Tu nieta</p>
+          <button class="boton boton--contorno boton--ancho boton-llamar" type="button" data-nombre="Ana Pérez" data-relacion="Tu nieta" data-iniciales="AP">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="boton__icono"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1v3.5c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.7c0-.6.4-1 1-1H7.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            Llamar
+          </button>
+        </article>
+
+        <article class="tarjeta-familiar">
+          <span class="tarjeta-familiar__estado tarjeta-familiar__estado--disponible">Disponible</span>
+          <div class="tarjeta-familiar__avatar tarjeta-familiar__avatar--amarillo">SG</div>
+          <h3 class="tarjeta-familiar__nombre">Sofía González</h3>
+          <p class="tarjeta-familiar__relacion">Tu nieta</p>
+          <button class="boton boton--contorno boton--ancho boton-llamar" type="button" data-nombre="Sofía González" data-relacion="Tu nieta" data-iniciales="SG">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="boton__icono"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1v3.5c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.7c0-.6.4-1 1-1H7.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            Llamar
+          </button>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="familiares__seccion">
+      <h2 class="familiares__titulo-seccion">Mensajes de tu Familia</h2>
+
+      <div class="familiares__mensajes" id="mensajes-lista">
+
+        <article class="mensaje-familiar">
+          <div class="mensaje-familiar__avatar mensaje-familiar__avatar--morado">MG</div>
+          <div class="mensaje-familiar__cuerpo">
+            <div class="mensaje-familiar__encabezado">
+              <span class="mensaje-familiar__nombre">María González</span>
+              <span class="mensaje-familiar__tiempo">Hace 2 horas</span>
+            </div>
+            <p class="mensaje-familiar__texto">¡Buenos días mamá! Te mando una foto de los nietos jugando en el parque. Te quiero mucho 💛</p>
+            <button class="mensaje-familiar__imagen-boton" type="button" data-imagen="../../../images/nietos.png" data-alt="Foto enviada por María: los nietos jugando en el parque">
+              <img class="mensaje-familiar__imagen" src="../../../images/nietos.png" alt="Foto enviada por María: los nietos jugando en el parque">
+              <span class="mensaje-familiar__imagen-etiqueta">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v4M9 21H5a2 2 0 0 1-2-2v-4M21 15v4a2 2 0 0 1-2 2h-4M3 9V5a2 2 0 0 1 2-2h4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Ver imagen
+              </span>
+            </button>
+          </div>
+        </article>
+
+        <article class="mensaje-familiar">
+          <div class="mensaje-familiar__avatar mensaje-familiar__avatar--turquesa">CG</div>
+          <div class="mensaje-familiar__cuerpo">
+            <div class="mensaje-familiar__encabezado">
+              <span class="mensaje-familiar__nombre">Carlos González</span>
+              <span class="mensaje-familiar__tiempo">Ayer</span>
+            </div>
+            <p class="mensaje-familiar__texto">Te llamo esta noche para hablar del cumpleaños. ¡Un abrazo grande!</p>
+          </div>
+        </article>
+
+        <article class="mensaje-familiar">
+          <div class="mensaje-familiar__avatar mensaje-familiar__avatar--verde">AP</div>
+          <div class="mensaje-familiar__cuerpo">
+            <div class="mensaje-familiar__encabezado">
+              <span class="mensaje-familiar__nombre">Ana Pérez</span>
+              <span class="mensaje-familiar__tiempo">Hace 3 días</span>
+            </div>
+            <p class="mensaje-familiar__texto">Mirá lo que dibujé para vos en la escuela, abuela 🎨</p>
+            <button class="mensaje-familiar__imagen-boton" type="button" data-imagen="../../../images/niño2.png" data-alt="Dibujo enviado por Ana">
+              <img class="mensaje-familiar__imagen" src="../../../images/niño2.png" alt="Dibujo enviado por Ana">
+              <span class="mensaje-familiar__imagen-etiqueta">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v4M9 21H5a2 2 0 0 1-2-2v-4M21 15v4a2 2 0 0 1-2 2h-4M3 9V5a2 2 0 0 1 2-2h4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Ver imagen
+              </span>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+    <footer class="pie-dashboard">
+      <p>© 2026 MemoCare - Cuidado Cognitivo con Empatía</p>
+      <nav class="pie-dashboard__enlaces" aria-label="Enlaces del pie de página">
+        <a href="#">Soporte</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Contacto</a>
+        <a href="#">Términos</a>
+      </nav>
+    </footer>
+
+  </div>
+
+</div>
+
+<div class="modal-llamada" id="modal-llamada" role="dialog" aria-modal="true" aria-labelledby="modal-llamada-nombre" hidden>
+  <div class="modal-llamada__overlay" id="modal-llamada-overlay"></div>
+  <div class="modal-llamada__caja">
+    <div class="modal-llamada__ondas" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="modal-llamada__avatar" id="modal-llamada-avatar">MG</div>
+    <p class="modal-llamada__estado" id="modal-llamada-estado">Llamando…</p>
+    <h2 class="modal-llamada__nombre" id="modal-llamada-nombre">María González</h2>
+    <p class="modal-llamada__relacion" id="modal-llamada-relacion">Tu hija</p>
+    <button class="modal-llamada__colgar" type="button" id="boton-colgar" aria-label="Finalizar llamada">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 15.5c5-4.5 11-4.5 16 0" stroke="white" stroke-width="2.2" stroke-linecap="round"/><path d="M9.2 17.3l1.6-1.9a1 1 0 0 1 1.3-.2c.6.4 1.3.4 1.9 0a1 1 0 0 1 1.3.2l1.6 1.9" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 3l18 18" stroke="white" stroke-width="2.2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</div>
+
+<div class="modal-imagen" id="modal-imagen" role="dialog" aria-modal="true" hidden>
+  <div class="modal-imagen__overlay" id="modal-imagen-overlay"></div>
+  <div class="modal-imagen__caja">
+    <button class="modal-imagen__cerrar" type="button" id="modal-imagen-cerrar" aria-label="Cerrar imagen">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+    </button>
+    <img class="modal-imagen__foto" id="modal-imagen-foto" src="" alt="">
+    <p class="modal-imagen__pie" id="modal-imagen-pie"></p>
+  </div>
+</div>
+
+<div class="notificacion" id="notificacion" role="status" aria-live="polite">
+  <span class="notificacion__icono" id="notificacion-icono"></span>
+  <p class="notificacion__texto" id="notificacion-texto"></p>
+</div>
+
+<script src="./familiares.js"></script>
+</body>
+</html>

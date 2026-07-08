@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MemoCare — Panel del Cuidador</title>
+<link rel="icon" href="../../../favicon.ico">
+<link rel="stylesheet" href="../../../styles/styles.css">
+<link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+
+ 
+<div class="panel-cuidador">
+ 
+  <aside class="barra-lateral">
+ 
+    <div class="barra-lateral__marca">
+      <span class="barra-lateral__nombre">MemoCare</span>
+      <span class="barra-lateral__subtitulo">Modo Cuidador</span>
+    </div>
+ 
+ 
+    <nav class="barra-lateral__nav" aria-label="Navegación del panel">
+      <a href="./dashboard-cuidador.html" class="barra-lateral__enlace barra-lateral__enlace--activo">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11.5L12 4l8 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Inicio
+      </a>
+      <a href="../medicamentos-cuidador/medicamentos-cuidador.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="9" width="16" height="8" rx="4" transform="rotate(-45 12 13)" stroke="currentColor" stroke-width="2"/><path d="M9.5 16.5l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Medicamentos
+      </a>
+      <a href="../rutinas-diarias-cuidador/rutinas-diarias-cuidador.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M4 9.5h16" stroke="currentColor" stroke-width="2"/><path d="M8 3v3M16 3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Rutinas Diarias
+      </a>
+      <a href="../tareas-especiales-cuidador/tareas-especiales-cuidador.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4" stroke="currentColor" stroke-width="2"/><path d="M9.5 12.5l1.8 1.8L15 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Tareas especiales
+      </a>
+      <a href="../equipo-cuidador/equipo-cuidador.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="2"/><path d="M3 19c1-4 3-6 6-6s5 2 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="9" r="2.4" stroke="currentColor" stroke-width="2"/><path d="M15.5 19c.6-2.8 2-4.3 3.5-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Equipo de Cuidado
+      </a>
+    </nav>
+ 
+    <div class="barra-lateral__perfil">
+      <div class="barra-lateral__perfil-avatar">DS</div>
+      <div>
+        <p class="barra-lateral__perfil-nombre">Dra. Silva</p>
+        <p class="barra-lateral__perfil-rol">Cuidador Principal</p>
+      </div>
+    </div>
+ 
+  </aside>
+ 
+  <div class="columna-principal">
+ 
+
+  <main class="contenido">
+ 
+    <div class="contenido__encabezado">
+      <div>
+        <h1 class="contenido__saludo">Buenos días, Dra. Silva</h1>
+        <p class="contenido__subtitulo">Aquí está el resumen del cuidado de hoy.</p>
+      </div>
+      <button class="boton boton--morado" type="button" id="boton-registrar-paciente" aria-haspopup="dialog" aria-controls="modal-paciente">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="boton__icono"><circle cx="9" cy="8" r="3.2" stroke="white" stroke-width="1.8"/><path d="M3.5 19c1-3.6 3.3-5.5 5.5-5.5s4.5 1.9 5.5 5.5" stroke="white" stroke-width="1.8" stroke-linecap="round"/><path d="M17 8v6M14 11h6" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>
+        Registrar Paciente
+      </button>
+    </div>
+ 
+    <div class="resumen-hoy">
+ 
+      <section class="tarjeta-alerta">
+        <h2 class="tarjeta-alerta__titulo">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4l9 16H3l9-16z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17" r="1" fill="currentColor"/></svg>
+          Alertas Recientes
+        </h2>
+ 
+        <div class="tarjeta-alerta__item">
+          <div class="tarjeta-alerta__item-icono">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2" stroke="currentColor" stroke-width="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="2"/><path d="M9 13l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="tarjeta-alerta__item-texto">
+            <p class="tarjeta-alerta__item-titulo">Medicamento omitido</p>
+            <p class="tarjeta-alerta__item-detalle">Don Roberto - Losartán 50mg (Hace 2 horas)</p>
+          </div>
+          <button class="boton boton--contorno tarjeta-alerta__item-boton" type="button">Revisar</button>
+        </div>
+      </section>
+ 
+      <section class="tarjeta-adherencia">
+        <h2 class="tarjeta-adherencia__titulo">Adherencia Semanal</h2>
+ 
+        <div class="adherencia-item">
+          <div class="adherencia-item__linea">
+            <span>Medicamentos</span>
+            <span>35%</span>
+          </div>
+          <div class="adherencia-item__barra">
+            <div class="adherencia-item__progreso adherencia-item__progreso--baja" style="width: 35%;"></div>
+          </div>
+        </div>
+ 
+        <div class="adherencia-item">
+          <div class="adherencia-item__linea">
+            <span>Ejercicios Cognitivos</span>
+            <span>60%</span>
+          </div>
+          <div class="adherencia-item__barra">
+            <div class="adherencia-item__progreso adherencia-item__progreso--media" style="width: 60%;"></div>
+          </div>
+        </div>
+ 
+        <div class="adherencia-item">
+          <div class="adherencia-item__linea">
+            <span>Citas Asistidas</span>
+            <span>100%</span>
+          </div>
+          <div class="adherencia-item__barra">
+            <div class="adherencia-item__progreso adherencia-item__progreso--alta" style="width: 100%;"></div>
+          </div>
+        </div>
+      </section>
+ 
+    </div>
+ 
+    <section class="pacientes">
+      <div class="pacientes__encabezado">
+        <h2 class="pacientes__titulo">Pacientes a Cargo</h2>
+        <button class="pacientes__filtro" type="button" aria-label="Filtrar pacientes">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5h16M7 12h10M10 19h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+ 
+      <div class="pacientes__grid" id="lista-pacientes">
+ 
+        <article class="tarjeta-paciente" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="modal-detalle-paciente">
+          <div class="tarjeta-paciente__avatar">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <circle cx="32" cy="32" r="32" fill="#F0D9DD"/>
+              <path d="M32 44c11 0 19 7 19 18H13c0-11 8-18 19-18z" fill="#7B2E3B"/>
+              <circle cx="32" cy="27" r="13" fill="#F2C9A0"/>
+              <path d="M19 24c-1-9 5-15 13-15s14 6 13 15c-1-2-2-3-2-3-3 5-9 5-11 5s-8 0-11-5c0 0-1 1-2 3z" fill="#E7E7EA"/>
+              <circle cx="27" cy="28" r="1.6" fill="#5C3A21"/>
+              <circle cx="37" cy="28" r="1.6" fill="#5C3A21"/>
+              <path d="M28 33c1.5 1.5 4.5 1.5 6 0" stroke="#B5754F" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="tarjeta-paciente__info">
+            <p class="tarjeta-paciente__nombre">Doña Carmen</p>
+            <p class="tarjeta-paciente__edad">78 años</p>
+            <span class="tarjeta-paciente__estado tarjeta-paciente__estado--estable">Estable</span>
+          </div>
+          <svg class="tarjeta-paciente__flecha" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </article>
+ 
+        <article class="tarjeta-paciente" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="modal-detalle-paciente">
+          <div class="tarjeta-paciente__avatar">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <circle cx="32" cy="32" r="32" fill="#E3DEF7"/>
+              <path d="M32 44c11 0 19 7 19 18H13c0-11 8-18 19-18z" fill="#3B4A8B"/>
+              <circle cx="32" cy="27" r="13" fill="#F2C9A0"/>
+              <path d="M19 24c1-9 8-13 13-13s11 4 13 12c-4-2-9-3-13-3-5 0-10 1-13 4z" fill="#B5432C"/>
+              <circle cx="27" cy="28" r="1.6" fill="#5C3A21"/>
+              <circle cx="37" cy="28" r="1.6" fill="#5C3A21"/>
+              <path d="M28 33c1.5 1.5 4.5 1.5 6 0" stroke="#B5754F" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="tarjeta-paciente__info">
+            <p class="tarjeta-paciente__nombre">Don Roberto</p>
+            <p class="tarjeta-paciente__edad">82 años</p>
+            <span class="tarjeta-paciente__estado tarjeta-paciente__estado--atencion">Atención</span>
+          </div>
+          <svg class="tarjeta-paciente__flecha" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </article>
+ 
+        <article class="tarjeta-paciente" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="modal-detalle-paciente">
+          <div class="tarjeta-paciente__avatar tarjeta-paciente__avatar--iniciales">ML</div>
+          <div class="tarjeta-paciente__info">
+            <p class="tarjeta-paciente__nombre">María Luisa</p>
+            <p class="tarjeta-paciente__edad">75 años</p>
+            <span class="tarjeta-paciente__estado tarjeta-paciente__estado--excelente">Excelente</span>
+          </div>
+          <svg class="tarjeta-paciente__flecha" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </article>
+ 
+      </div>
+    </section>
+ 
+  </main>
+ 
+    <footer class="pie-dashboard">
+      <p>© 2026 MemoCare - Cuidado Cognitivo con Empatía</p>
+      <nav class="pie-dashboard__enlaces" aria-label="Enlaces del pie de página">
+        <a href="#">Soporte</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Contacto</a>
+        <a href="#">Términos</a>
+      </nav>
+    </footer>
+ 
+  </div>
+ 
+</div>
+ 
+
+<div class="modal-paciente" id="modal-paciente" aria-hidden="true">
+  <div class="modal-paciente__overlay" data-cerrar-modal-paciente></div>
+ 
+  <div class="modal-paciente__caja" role="dialog" aria-modal="true" aria-labelledby="modal-paciente-titulo">
+    <button class="modal-paciente__cerrar" type="button" aria-label="Cerrar" data-cerrar-modal-paciente>✕</button>
+ 
+    <h2 class="modal-paciente__titulo" id="modal-paciente-titulo">Registrar Paciente</h2>
+ 
+    <form class="modal-paciente__formulario" id="formulario-paciente" novalidate>
+      <div class="campo">
+        <label for="paciente-nombre">Nombre completo</label>
+        <input type="text" id="paciente-nombre" name="nombre" placeholder="Escribe el nombre del paciente" minlength="3" required>
+        <span class="campo__mensaje-error" data-error-para="paciente-nombre">Escribe un nombre válido (mínimo 3 caracteres).</span>
+      </div>
+ 
+      <div class="campo">
+        <label for="paciente-edad">Edad</label>
+        <input type="number" id="paciente-edad" name="edad" placeholder="Ej. 75" min="1" max="120" required>
+        <span class="campo__mensaje-error" data-error-para="paciente-edad">Ingresa una edad válida (entre 1 y 120).</span>
+      </div>
+ 
+      <div class="campo">
+        <label for="paciente-estado">Estado</label>
+        <select id="paciente-estado" name="estado" required>
+          <option value="" disabled selected>Selecciona un estado</option>
+          <option value="estable">Estable</option>
+          <option value="atencion">En Atención</option>
+        </select>
+        <span class="campo__mensaje-error" data-error-para="paciente-estado">Selecciona el estado del paciente.</span>
+      </div>
+ 
+      <button type="submit" class="boton boton--morado boton--ancho">Registrar Paciente</button>
+      <p class="modal-paciente__feedback" id="paciente-feedback" role="status">¡Paciente registrado correctamente!</p>
+    </form>
+  </div>
+</div>
+ 
+
+<div class="modal-paciente" id="modal-detalle-paciente" aria-hidden="true">
+  <div class="modal-paciente__overlay" data-cerrar-modal-detalle></div>
+ 
+  <div class="modal-paciente__caja" role="dialog" aria-modal="true" aria-labelledby="modal-detalle-titulo">
+    <button class="modal-paciente__cerrar" type="button" aria-label="Cerrar" data-cerrar-modal-detalle>✕</button>
+ 
+    <div class="detalle-paciente__encabezado">
+      <div class="detalle-paciente__avatar" id="detalle-avatar"></div>
+      <div>
+        <h2 class="modal-paciente__titulo detalle-paciente__nombre" id="modal-detalle-titulo" data-campo="nombre"></h2>
+        <p class="detalle-paciente__edad" data-campo="edad"></p>
+      </div>
+    </div>
+ 
+    <span class="tarjeta-paciente__estado" id="detalle-estado"></span>
+ 
+    <dl class="detalle-paciente__lista">
+      <div class="detalle-paciente__item">
+        <dt>Último recordatorio</dt>
+        <dd data-campo="recordatorio"></dd>
+      </div>
+      <div class="detalle-paciente__item">
+        <dt>Medicina asignada</dt>
+        <dd data-campo="medicina"></dd>
+      </div>
+    </dl>
+  </div>
+</div>
+
+<script src="./dashboard-cuidador.js"></script>
+</body>
+</html>
