@@ -1,0 +1,250 @@
+.config-medicamento {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 28px;
+}
+
+
+.config-medicamento__info .etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.config-medicamento__info .etiqueta svg {
+  width: 16px;
+  height: 16px;
+}
+
+.config-medicamento__titulo {
+  font-size: 1.9rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: var(--color-azul-oscuro);
+  margin: 14px 0 16px;
+}
+
+.config-medicamento__texto {
+  color: var(--color-texto-suave);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 28px;
+  max-width: 460px;
+}
+
+.config-medicamento__imagen {
+  border-radius: var(--radio-grande);
+  overflow: hidden;
+  box-shadow: var(--sombra-media);
+  line-height: 0;
+}
+
+.config-medicamento__imagen svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.tarjeta-formulario {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-grande);
+  padding: 32px;
+  box-shadow: var(--sombra-media);
+  display: grid;
+  gap: 28px;
+}
+
+.tarjeta-formulario__seccion {
+  display: grid;
+  gap: 18px;
+}
+
+.tarjeta-formulario__titulo-seccion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-azul-oscuro);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.tarjeta-formulario__icono-seccion {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tarjeta-formulario__icono-seccion svg { width: 16px; height: 16px; }
+
+.tarjeta-formulario__icono-seccion--morado { background-color: var(--color-morado); }
+.tarjeta-formulario__icono-seccion--turquesa { background-color: var(--color-turquesa); }
+
+.tarjeta-formulario__fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+
+.campo select {
+  border: 1.5px solid var(--color-borde);
+  border-radius: var(--radio-chico);
+  padding: 14px 16px;
+  font-size: 0.98rem;
+  color: var(--color-texto);
+  background-color: var(--color-fondo-claro);
+  transition: var(--transicion);
+}
+
+.campo select:focus {
+  outline: none;
+  border-color: var(--color-morado);
+  background-color: var(--color-blanco);
+  box-shadow: 0 0 0 4px rgba(107, 78, 230, 0.12);
+}
+
+.campo select.campo--error {
+  border-color: #E5484D;
+}
+
+
+.campo__con-icono {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.campo__con-icono svg {
+  position: absolute;
+  left: 14px;
+  width: 18px;
+  height: 18px;
+  color: var(--color-texto-suave);
+  pointer-events: none;
+}
+
+.campo__con-icono input {
+  width: 100%;
+  padding-left: 42px;
+}
+
+
+.dias-activos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dias-activos__dia {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-borde);
+  background-color: var(--color-blanco);
+  color: var(--color-texto-suave);
+  font-weight: 700;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transicion);
+}
+
+.dias-activos__dia:hover {
+  border-color: var(--color-morado);
+}
+
+.dias-activos__dia--activo {
+  background-color: var(--color-morado-suave);
+  border-color: var(--color-morado);
+  color: var(--color-morado-oscuro);
+}
+
+
+.tarjeta-formulario__acciones {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.tarjeta-formulario__acciones .boton--contorno {
+  border-color: var(--color-turquesa);
+}
+
+.tarjeta-formulario__feedback {
+  display: none;
+  text-align: center;
+  background-color: var(--color-turquesa-suave);
+  color: var(--color-azul-oscuro);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 14px 18px;
+  border-radius: var(--radio-chico);
+}
+
+.tarjeta-formulario__feedback.es-visible {
+  display: block;
+}
+
+
+.consejo-cuidador {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background-color: var(--color-turquesa-suave);
+  border: 1px solid #C8ECE8;
+  border-radius: var(--radio-grande);
+  padding: 22px 24px;
+}
+
+.consejo-cuidador__icono {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--color-blanco);
+  color: #1B9C8F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.consejo-cuidador__icono svg { width: 18px; height: 18px; }
+
+.consejo-cuidador__titulo {
+  font-weight: 700;
+  color: var(--color-azul-oscuro);
+  font-size: 0.96rem;
+  margin-bottom: 4px;
+}
+
+.consejo-cuidador__texto {
+  color: var(--color-texto-suave);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+
+@media (max-width: 960px) {
+  .config-medicamento {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .tarjeta-formulario { padding: 24px 20px; }
+  .tarjeta-formulario__fila { grid-template-columns: 1fr; }
+  .tarjeta-formulario__acciones { flex-direction: column-reverse; }
+  .tarjeta-formulario__acciones .boton { width: 100%; }
+  .config-medicamento__titulo { font-size: 1.6rem; }
+}

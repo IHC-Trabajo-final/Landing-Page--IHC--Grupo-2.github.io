@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MemoCare — Equipo de Cuidado</title>
+<link rel="icon" href="../../../favicon.ico">
+<link rel="stylesheet" href="../../../styles/styles.css">
+<link rel="stylesheet" href="../dashboard-cuidador/dashboard.css">
+<link rel="stylesheet" href="./equipo-cuidador.css">
+</head>
+<body>
+
+<div class="panel-cuidador">
+
+  <aside class="barra-lateral">
+
+    <div class="barra-lateral__marca">
+      <span class="barra-lateral__nombre">MemoCare</span>
+      <span class="barra-lateral__subtitulo">Modo Cuidador</span>
+    </div>
+
+
+    <nav class="barra-lateral__nav" aria-label="Navegación del panel">
+      <a href="../dashboard-cuidador/dashboard-cuidador.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11.5L12 4l8 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Inicio
+      </a>
+      <a href="../medicamentos-cuidador/medicamentos-cuidador.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="9" width="16" height="8" rx="4" transform="rotate(-45 12 13)" stroke="currentColor" stroke-width="2"/><path d="M9.5 16.5l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Medicamentos
+      </a>
+      <a href="../rutinas-diarias-cuidador/rutinas-diarias-cuidador.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M4 9.5h16" stroke="currentColor" stroke-width="2"/><path d="M8 3v3M16 3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Rutinas Diarias
+      </a>
+      <a href="../tareas-especiales-cuidador/tareas-especiales-cuidador.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4" stroke="currentColor" stroke-width="2"/><path d="M9.5 12.5l1.8 1.8L15 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Tareas especiales
+      </a>
+      <a href="./equipo-cuidador.html" class="barra-lateral__enlace barra-lateral__enlace--activo">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="2"/><path d="M3 19c1-4 3-6 6-6s5 2 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="9" r="2.4" stroke="currentColor" stroke-width="2"/><path d="M15.5 19c.6-2.8 2-4.3 3.5-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Equipo de Cuidado
+      </a>
+    </nav>
+
+    <div class="barra-lateral__perfil">
+      <div class="barra-lateral__perfil-avatar">DS</div>
+      <div>
+        <p class="barra-lateral__perfil-nombre">Dra. Silva</p>
+        <p class="barra-lateral__perfil-rol">Cuidador Principal</p>
+      </div>
+    </div>
+
+  </aside>
+
+  <div class="columna-principal">
+
+  <main class="contenido">
+
+    <div class="equipo__encabezado">
+      <div>
+        <h1 class="equipo__titulo">Equipo de Cuidado</h1>
+        <p class="equipo__subtitulo">Todas las personas que acompañan el cuidado, y un lugar para pedir ayuda cuando la necesites.</p>
+      </div>
+      <button class="boton boton--morado" type="button" id="boton-solicitar-ayuda" aria-haspopup="dialog" aria-controls="modal-solicitud">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="boton__icono"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z" stroke="white" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        Solicitar Ayuda
+      </button>
+    </div>
+
+    <section class="turnos-hoy">
+      <h2 class="equipo__titulo-seccion">Turnos de Hoy</h2>
+      <div class="turnos-hoy__lista">
+        <div class="turno-item">
+          <span class="turno-item__paciente">Doña Carmen</span>
+          <span class="turno-item__separador">·</span>
+          <span class="turno-item__responsable">María Gómez</span>
+          <span class="turno-item__horario">8:00 AM – 4:00 PM</span>
+        </div>
+        <div class="turno-item">
+          <span class="turno-item__paciente">Don Roberto</span>
+          <span class="turno-item__separador">·</span>
+          <span class="turno-item__responsable">Dra. Silva</span>
+          <span class="turno-item__horario">Todo el día</span>
+        </div>
+        <div class="turno-item">
+          <span class="turno-item__paciente">María Luisa</span>
+          <span class="turno-item__separador">·</span>
+          <span class="turno-item__responsable">Enf. Rosa Castillo</span>
+          <span class="turno-item__horario">9:00 AM – 1:00 PM</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="solicitudes">
+      <h2 class="equipo__titulo-seccion">Solicitudes de Ayuda</h2>
+
+      <div class="solicitudes__lista" id="lista-solicitudes">
+
+        <article class="solicitud-ayuda" data-estado="pendiente">
+          <div class="solicitud-ayuda__icono">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M4 9.5h16" stroke="currentColor" stroke-width="2"/><path d="M8 3v3M16 3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="solicitud-ayuda__info">
+            <p class="solicitud-ayuda__titulo">Acompañar a cita médica</p>
+            <p class="solicitud-ayuda__detalle">Don Roberto · 15 jul 2026, 10:00 AM</p>
+            <p class="solicitud-ayuda__nota">Cita con el cardiólogo, necesito que alguien lo lleve porque yo tengo turno con Doña Carmen.</p>
+          </div>
+          <button class="boton boton--contorno solicitud-ayuda__boton" type="button" data-cubrir-solicitud>Puedo ayudar</button>
+        </article>
+
+        <article class="solicitud-ayuda" data-estado="pendiente">
+          <div class="solicitud-ayuda__icono">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="9" width="16" height="8" rx="4" transform="rotate(-45 12 13)" stroke="currentColor" stroke-width="2"/><path d="M9.5 16.5l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="solicitud-ayuda__info">
+            <p class="solicitud-ayuda__titulo">Recoger medicamentos</p>
+            <p class="solicitud-ayuda__detalle">María Luisa · 9 jul 2026, 5:00 PM</p>
+            <p class="solicitud-ayuda__nota">Hay que pasar por la farmacia antes de que cierre para recoger la Levotiroxina.</p>
+          </div>
+          <button class="boton boton--contorno solicitud-ayuda__boton" type="button" data-cubrir-solicitud>Puedo ayudar</button>
+        </article>
+
+        <article class="solicitud-ayuda" data-estado="cubierta">
+          <div class="solicitud-ayuda__icono">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="2"/><path d="M3 19c1-4 3-6 6-6s5 2 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="9" r="2.4" stroke="currentColor" stroke-width="2"/><path d="M15.5 19c.6-2.8 2-4.3 3.5-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="solicitud-ayuda__info">
+            <p class="solicitud-ayuda__titulo">Cubrir turno de la tarde</p>
+            <p class="solicitud-ayuda__detalle">Doña Carmen · 7 jul 2026, 2:00 PM – 6:00 PM</p>
+            <p class="solicitud-ayuda__nota">Tengo una cita personal, necesito que alguien la acompañe esa tarde.</p>
+          </div>
+          <span class="solicitud-ayuda__cubierta-por">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Cubierta por Carlos Rodríguez
+          </span>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="directorio">
+      <h2 class="equipo__titulo-seccion">Directorio del Equipo</h2>
+
+      <div class="directorio__grid">
+
+        <article class="miembro-equipo">
+          <div class="miembro-equipo__avatar" style="background-color:#EFEAFD; color:#5638D1;">DS</div>
+          <div class="miembro-equipo__info">
+            <p class="miembro-equipo__nombre">Dra. Silva</p>
+            <p class="miembro-equipo__rol">Cuidador Principal</p>
+            <p class="miembro-equipo__paciente">Todos los pacientes</p>
+          </div>
+          <span class="miembro-equipo__estado miembro-equipo__estado--disponible">Disponible</span>
+          <a href="tel:+51900000000" class="miembro-equipo__contacto" aria-label="Llamar a Dra. Silva">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 3.5h3l2 5-2.5 1.5a12 12 0 0 0 5.5 5.5l1.5-2.5 5 2v3a2 2 0 0 1-2 2C11.5 20 4 12.5 4 5.5a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+
+        <article class="miembro-equipo">
+          <div class="miembro-equipo__avatar" style="background-color:#E3F6F4; color:#1B9C8F;">CR</div>
+          <div class="miembro-equipo__info">
+            <p class="miembro-equipo__nombre">Carlos Rodríguez</p>
+            <p class="miembro-equipo__rol">Familiar · Hijo</p>
+            <p class="miembro-equipo__paciente">Don Roberto</p>
+          </div>
+          <span class="miembro-equipo__estado miembro-equipo__estado--disponible">Disponible</span>
+          <a href="tel:+51900000001" class="miembro-equipo__contacto" aria-label="Llamar a Carlos Rodríguez">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 3.5h3l2 5-2.5 1.5a12 12 0 0 0 5.5 5.5l1.5-2.5 5 2v3a2 2 0 0 1-2 2C11.5 20 4 12.5 4 5.5a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+
+        <article class="miembro-equipo">
+          <div class="miembro-equipo__avatar" style="background-color:#FBE5E6; color:#C0392B;">MG</div>
+          <div class="miembro-equipo__info">
+            <p class="miembro-equipo__nombre">María Gómez</p>
+            <p class="miembro-equipo__rol">Familiar · Cuidadora</p>
+            <p class="miembro-equipo__paciente">Doña Carmen</p>
+          </div>
+          <span class="miembro-equipo__estado miembro-equipo__estado--ocupado">Ocupado</span>
+          <a href="tel:+51900000002" class="miembro-equipo__contacto" aria-label="Llamar a María Gómez">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 3.5h3l2 5-2.5 1.5a12 12 0 0 0 5.5 5.5l1.5-2.5 5 2v3a2 2 0 0 1-2 2C11.5 20 4 12.5 4 5.5a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+
+        <article class="miembro-equipo">
+          <div class="miembro-equipo__avatar" style="background-color:#E7E9F5; color:#1B2A6B;">FR</div>
+          <div class="miembro-equipo__info">
+            <p class="miembro-equipo__nombre">Dr. Fernando Ruiz</p>
+            <p class="miembro-equipo__rol">Médico de cabecera</p>
+            <p class="miembro-equipo__paciente">Don Roberto</p>
+          </div>
+          <span class="miembro-equipo__estado miembro-equipo__estado--fuera">Fuera de turno</span>
+          <a href="tel:+51900000003" class="miembro-equipo__contacto" aria-label="Llamar a Dr. Fernando Ruiz">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 3.5h3l2 5-2.5 1.5a12 12 0 0 0 5.5 5.5l1.5-2.5 5 2v3a2 2 0 0 1-2 2C11.5 20 4 12.5 4 5.5a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+
+        <article class="miembro-equipo">
+          <div class="miembro-equipo__avatar" style="background-color:#FBF1D6; color:#9A6B10;">RC</div>
+          <div class="miembro-equipo__info">
+            <p class="miembro-equipo__nombre">Enf. Rosa Castillo</p>
+            <p class="miembro-equipo__rol">Enfermera a domicilio</p>
+            <p class="miembro-equipo__paciente">María Luisa</p>
+          </div>
+          <span class="miembro-equipo__estado miembro-equipo__estado--disponible">Disponible</span>
+          <a href="tel:+51900000004" class="miembro-equipo__contacto" aria-label="Llamar a Rosa Castillo">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 3.5h3l2 5-2.5 1.5a12 12 0 0 0 5.5 5.5l1.5-2.5 5 2v3a2 2 0 0 1-2 2C11.5 20 4 12.5 4 5.5a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+
+        <article class="miembro-equipo">
+          <div class="miembro-equipo__avatar" style="background-color:#E1F5E8; color:#2DAA5E;">AP</div>
+          <div class="miembro-equipo__info">
+            <p class="miembro-equipo__nombre">Ana Pérez</p>
+            <p class="miembro-equipo__rol">Familiar · Nieta</p>
+            <p class="miembro-equipo__paciente">María Luisa</p>
+          </div>
+          <span class="miembro-equipo__estado miembro-equipo__estado--ocupado">Ocupado</span>
+          <a href="tel:+51900000005" class="miembro-equipo__contacto" aria-label="Llamar a Ana Pérez">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 3.5h3l2 5-2.5 1.5a12 12 0 0 0 5.5 5.5l1.5-2.5 5 2v3a2 2 0 0 1-2 2C11.5 20 4 12.5 4 5.5a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+    <footer class="pie-dashboard">
+      <p>© 2026 MemoCare - Cuidado Cognitivo con Empatía</p>
+      <nav class="pie-dashboard__enlaces" aria-label="Enlaces del pie de página">
+        <a href="#">Soporte</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Contacto</a>
+        <a href="#">Términos</a>
+      </nav>
+    </footer>
+
+  </div>
+
+</div>
+
+<div class="modal-paciente" id="modal-solicitud" aria-hidden="true">
+  <div class="modal-paciente__overlay" data-cerrar-modal-solicitud></div>
+
+  <div class="modal-paciente__caja" role="dialog" aria-modal="true" aria-labelledby="modal-solicitud-titulo">
+    <button class="modal-paciente__cerrar" type="button" aria-label="Cerrar" data-cerrar-modal-solicitud>✕</button>
+
+    <h2 class="modal-paciente__titulo" id="modal-solicitud-titulo">Solicitar Ayuda</h2>
+
+    <form class="modal-paciente__formulario" id="formulario-solicitud" novalidate>
+      <div class="campo">
+        <label for="solicitud-paciente">Paciente</label>
+        <select id="solicitud-paciente" name="paciente" required>
+          <option value="" disabled selected>Selecciona un paciente</option>
+          <option value="dona-carmen">Doña Carmen</option>
+          <option value="don-roberto">Don Roberto</option>
+          <option value="maria-luisa">María Luisa</option>
+        </select>
+        <span class="campo__mensaje-error" data-error-para="solicitud-paciente">Selecciona el paciente.</span>
+      </div>
+
+      <div class="campo">
+        <label for="solicitud-tipo">Tipo de ayuda</label>
+        <select id="solicitud-tipo" name="tipo" required>
+          <option value="" disabled selected>Selecciona el tipo de ayuda</option>
+          <option value="Cubrir turno">Cubrir turno</option>
+          <option value="Acompañar a cita médica">Acompañar a cita médica</option>
+          <option value="Recoger medicamentos">Recoger medicamentos</option>
+          <option value="Compañía / actividad">Compañía / actividad</option>
+          <option value="Otro">Otro</option>
+        </select>
+        <span class="campo__mensaje-error" data-error-para="solicitud-tipo">Selecciona el tipo de ayuda.</span>
+      </div>
+
+      <div class="tarjeta-formulario__fila">
+        <div class="campo">
+          <label for="solicitud-fecha">Fecha</label>
+          <input type="date" id="solicitud-fecha" name="fecha" required>
+          <span class="campo__mensaje-error" data-error-para="solicitud-fecha">Selecciona una fecha.</span>
+        </div>
+        <div class="campo">
+          <label for="solicitud-hora">Hora</label>
+          <input type="time" id="solicitud-hora" name="hora" required>
+          <span class="campo__mensaje-error" data-error-para="solicitud-hora">Selecciona una hora.</span>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="solicitud-nota">Nota (opcional)</label>
+        <textarea id="solicitud-nota" name="nota" rows="3" placeholder="Agrega algún detalle que ayude a quien va a apoyarte..."></textarea>
+      </div>
+
+      <button type="submit" class="boton boton--morado boton--ancho">Publicar Solicitud</button>
+      <p class="modal-paciente__feedback" id="solicitud-feedback" role="status">¡Solicitud publicada! El equipo podrá verla y ofrecerse a ayudar.</p>
+    </form>
+  </div>
+</div>
+
+<script src="./equipo-cuidador.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MemoCare — Recordatorios</title>
+<link rel="icon" href="../../../favicon.ico">
+<link rel="stylesheet" href="../../../styles/styles.css">
+<link rel="stylesheet" href="../../cuidador/dashboard-cuidador/dashboard.css">
+<link rel="stylesheet" href="./recordatorios-adulto-mayor.css">
+</head>
+<body>
+
+<div class="panel-cuidador">
+
+  <aside class="barra-lateral">
+
+    <div class="barra-lateral__marca">
+      <span class="barra-lateral__nombre">MemoCare</span>
+      <span class="barra-lateral__subtitulo">Modo Adulto Mayor</span>
+    </div>
+
+    <nav class="barra-lateral__nav" aria-label="Navegación del panel">
+      <a href="../dashboard-adulto-mayor/dashboard-adulto-mayor.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11.5L12 4l8 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Inicio
+      </a>
+      <a href="../medicamentos-adulto-mayor/medicamentos-adulto-mayor.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="9" width="16" height="8" rx="4" transform="rotate(-45 12 13)" stroke="currentColor" stroke-width="2"/><path d="M9.5 16.5l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Medicamentos
+      </a>
+      <a href="../rutina-adulto-mayor/rutina-adulto-mayor.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M4 9.5h16" stroke="currentColor" stroke-width="2"/><path d="M8 3v3M16 3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Rutinas Diarias
+      </a>
+      <a href="./recordatorios-adulto-mayor.html" class="barra-lateral__enlace barra-lateral__enlace--activo">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg>
+        Recordatorios
+      </a>
+      <a href="../familiares/familiares.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="2"/><path d="M3 19c1-4 3-6 6-6s5 2 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="9" r="2.4" stroke="currentColor" stroke-width="2"/><path d="M15.5 19c.6-2.8 2-4.3 3.5-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Familiares
+      </a>
+    </nav>
+
+    <div class="barra-lateral__perfil">
+      <div class="barra-lateral__perfil-avatar">DC</div>
+      <div>
+        <p class="barra-lateral__perfil-nombre">Doña Carmen</p>
+        <p class="barra-lateral__perfil-rol">Adulto Mayor</p>
+      </div>
+    </div>
+
+  </aside>
+
+  <div class="columna-principal">
+
+    <main class="contenido">
+
+      <div class="recordatorios__encabezado">
+        <div>
+          <h1 class="recordatorios__titulo">Mis Recordatorios</h1>
+          <p class="recordatorios__subtitulo">Aquí están todas las actividades y citas que tienes pendientes.</p>
+        </div>
+      </div>
+
+      <div class="tareas__resumen">
+        <div class="resumen-estado resumen-estado--pendiente">
+          <span class="resumen-estado__numero" id="contador-pendientes">0</span>
+          <span class="resumen-estado__texto">Pendientes</span>
+        </div>
+        <div class="resumen-estado resumen-estado--proceso">
+          <span class="resumen-estado__numero" id="contador-proceso">0</span>
+          <span class="resumen-estado__texto">En proceso</span>
+        </div>
+        <div class="resumen-estado resumen-estado--completada">
+          <span class="resumen-estado__numero" id="contador-completadas">0</span>
+          <span class="resumen-estado__texto">Completadas</span>
+        </div>
+      </div>
+
+      <div class="tareas__filtros" role="tablist" aria-label="Filtrar recordatorios por estado">
+        <button class="tareas__filtro tareas__filtro--activo" type="button" data-filtro="todas">Todos</button>
+        <button class="tareas__filtro" type="button" data-filtro="pendiente">Pendientes</button>
+        <button class="tareas__filtro" type="button" data-filtro="proceso">En proceso</button>
+        <button class="tareas__filtro" type="button" data-filtro="completada">Completados</button>
+      </div>
+
+      <ul class="tareas__lista" id="lista-tareas">
+
+        <li class="tarea" data-estado="pendiente" data-prioridad="alta">
+          <label class="tarea__casilla">
+            <input type="checkbox">
+            <span class="tarea__casilla-visual"></span>
+          </label>
+          <div class="tarea__info">
+            <p class="tarea__titulo">Cita con el cardiólogo</p>
+            <div class="tarea__meta">
+              <span class="tarea__fecha">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M4 9.5h16" stroke="currentColor" stroke-width="2"/><path d="M8 3v3M16 3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                15 jul 2026
+              </span>
+            </div>
+          </div>
+          <span class="tarea__prioridad tarea__prioridad--alta">Alta</span>
+          <span class="tarea__estado tarea__estado--pendiente">Pendiente</span>
+        </li>
+
+        <li class="tarea" data-estado="proceso" data-prioridad="media">
+          <label class="tarea__casilla">
+            <input type="checkbox">
+            <span class="tarea__casilla-visual"></span>
+          </label>
+          <div class="tarea__info">
+            <p class="tarea__titulo">Renovar seguro médico</p>
+            <div class="tarea__meta">
+              <span class="tarea__fecha">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M4 9.5h16" stroke="currentColor" stroke-width="2"/><path d="M8 3v3M16 3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                20 jul 2026
+              </span>
+            </div>
+          </div>
+          <span class="tarea__prioridad tarea__prioridad--media">Media</span>
+          <span class="tarea__estado tarea__estado--proceso">En proceso</span>
+        </li>
+
+        <li class="tarea" data-estado="pendiente" data-prioridad="alta">
+          <label class="tarea__casilla">
+            <input type="checkbox">
+            <span class="tarea__casilla-visual"></span>
+          </label>
+          <div class="tarea__info">
+            <p class="tarea__titulo">Recoger receta en farmacia</p>
+            <div class="tarea__meta">
+              <span class="tarea__fecha">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M4 9.5h16" stroke="currentColor" stroke-width="2"/><path d="M8 3v3M16 3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                9 jul 2026
+              </span>
+            </div>
+          </div>
+          <span class="tarea__prioridad tarea__prioridad--alta">Alta</span>
+          <span class="tarea__estado tarea__estado--pendiente">Pendiente</span>
+        </li>
+
+        <li class="tarea" data-estado="proceso" data-prioridad="baja">
+          <label class="tarea__casilla">
+            <input type="checkbox">
+            <span class="tarea__casilla-visual"></span>
+          </label>
+          <div class="tarea__info">
+            <p class="tarea__titulo">Instalar barras de seguridad en el baño</p>
+            <div class="tarea__meta">
+              <span class="tarea__fecha">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M4 9.5h16" stroke="currentColor" stroke-width="2"/><path d="M8 3v3M16 3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                28 jul 2026
+              </span>
+            </div>
+          </div>
+          <span class="tarea__prioridad tarea__prioridad--baja">Baja</span>
+          <span class="tarea__estado tarea__estado--proceso">En proceso</span>
+        </li>
+
+        <li class="tarea tarea--completada" data-estado="completada" data-prioridad="media">
+          <label class="tarea__casilla">
+            <input type="checkbox" checked>
+            <span class="tarea__casilla-visual"></span>
+          </label>
+          <div class="tarea__info">
+            <p class="tarea__titulo">Control mensual de presión arterial</p>
+            <div class="tarea__meta">
+              <span class="tarea__fecha">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M4 9.5h16" stroke="currentColor" stroke-width="2"/><path d="M8 3v3M16 3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                2 jul 2026
+              </span>
+            </div>
+          </div>
+          <span class="tarea__prioridad tarea__prioridad--media">Media</span>
+          <span class="tarea__estado tarea__estado--completada">Completada</span>
+        </li>
+
+        <li class="tarea tarea--completada" data-estado="completada" data-prioridad="baja">
+          <label class="tarea__casilla">
+            <input type="checkbox" checked>
+            <span class="tarea__casilla-visual"></span>
+          </label>
+          <div class="tarea__info">
+            <p class="tarea__titulo">Comprar andador nuevo</p>
+            <div class="tarea__meta">
+              <span class="tarea__fecha">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M4 9.5h16" stroke="currentColor" stroke-width="2"/><path d="M8 3v3M16 3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                28 jun 2026
+              </span>
+            </div>
+          </div>
+          <span class="tarea__prioridad tarea__prioridad--baja">Baja</span>
+          <span class="tarea__estado tarea__estado--completada">Completada</span>
+        </li>
+
+      </ul>
+
+    </main>
+
+    <footer class="pie-dashboard">
+      <p>© 2026 MemoCare - Cuidado Cognitivo con Empatía</p>
+      <nav class="pie-dashboard__enlaces" aria-label="Enlaces del pie de página">
+        <a href="#">Soporte</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Contacto</a>
+        <a href="#">Términos</a>
+      </nav>
+    </footer>
+
+  </div>
+
+</div>
+
+<script src="./recordatorios-adulto-mayor.js"></script>
+</body>
+</html>

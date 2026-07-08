@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MemoCare — Medicamentos</title>
+<link rel="icon" href="../../../favicon.ico">
+<link rel="stylesheet" href="../../../styles/styles.css">
+<link rel="stylesheet" href="../dashboard-cuidador/dashboard.css">
+<link rel="stylesheet" href="./medicamentos-cuidador.css">
+</head>
+<body>
+
+<div class="panel-cuidador">
+
+
+  <aside class="barra-lateral">
+
+    <div class="barra-lateral__marca">
+      <span class="barra-lateral__nombre">MemoCare</span>
+      <span class="barra-lateral__subtitulo">Modo Cuidador</span>
+    </div>
+
+
+    <nav class="barra-lateral__nav" aria-label="Navegación del panel">
+      <a href="../dashboard-cuidador/dashboard-cuidador.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11.5L12 4l8 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Inicio
+      </a>
+      <a href="./medicamentos-cuidador.html" class="barra-lateral__enlace barra-lateral__enlace--activo">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="9" width="16" height="8" rx="4" transform="rotate(-45 12 13)" stroke="currentColor" stroke-width="2"/><path d="M9.5 16.5l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Medicamentos
+      </a>
+      <a href="../rutinas-diarias-cuidador/rutinas-diarias-cuidador.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M4 9.5h16" stroke="currentColor" stroke-width="2"/><path d="M8 3v3M16 3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Rutinas Diarias
+      </a>
+      <a href="../tareas-especiales-cuidador/tareas-especiales-cuidador.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M9 4V3.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V4" stroke="currentColor" stroke-width="2"/><path d="M9.5 12.5l1.8 1.8L15 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Tareas especiales
+      </a>
+      <a href="../equipo-cuidador/equipo-cuidador.html" class="barra-lateral__enlace">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="2"/><path d="M3 19c1-4 3-6 6-6s5 2 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="9" r="2.4" stroke="currentColor" stroke-width="2"/><path d="M15.5 19c.6-2.8 2-4.3 3.5-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Equipo de Cuidado
+      </a>
+    </nav>
+
+    <div class="barra-lateral__perfil">
+      <div class="barra-lateral__perfil-avatar">DS</div>
+      <div>
+        <p class="barra-lateral__perfil-nombre">Dra. Silva</p>
+        <p class="barra-lateral__perfil-rol">Cuidador Principal</p>
+      </div>
+    </div>
+
+  </aside>
+
+
+  <div class="columna-principal">
+
+  <main class="contenido">
+
+    <div class="config-medicamento">
+
+      <div class="config-medicamento__info">
+        <span class="etiqueta">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="9" width="16" height="8" rx="4" transform="rotate(-45 12 13)" stroke="currentColor" stroke-width="2"/><path d="M9.5 16.5l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Medication Management
+        </span>
+
+        <h1 class="config-medicamento__titulo">Configura un nuevo recordatorio de medicación.</h1>
+
+        <p class="config-medicamento__texto">
+          Ayude a su ser querido a seguir el tratamiento correctamente. Los recordatorios claros ayudan a reducir la ansiedad y garantizan resultados de salud consistentes.
+        </p>
+
+        <div class="config-medicamento__imagen">
+          <svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="400" height="260" fill="#1F2937"/>
+            <ellipse cx="200" cy="215" rx="170" ry="24" fill="#E9E9EE"/>
+            <ellipse cx="200" cy="205" rx="150" ry="16" fill="#D8D8DC"/>
+
+            <ellipse cx="120" cy="185" rx="34" ry="13" fill="#F4EDE3" transform="rotate(-12 120 185)"/>
+            <ellipse cx="150" cy="170" rx="34" ry="13" fill="#8B5CF6" transform="rotate(8 150 170)"/>
+            <ellipse cx="150" cy="170" rx="17" ry="13" fill="#6D3FD1" transform="rotate(8 150 170)"/>
+            <ellipse cx="190" cy="150" rx="30" ry="12" fill="#EAD9C6" transform="rotate(-6 190 150)"/>
+            <ellipse cx="230" cy="165" rx="32" ry="12.5" fill="#7B4FE0" transform="rotate(20 230 165)"/>
+            <ellipse cx="230" cy="165" rx="16" ry="12.5" fill="#5A34B8" transform="rotate(20 230 165)"/>
+            <circle cx="170" cy="188" r="10" fill="#F0D9A0"/>
+            <circle cx="200" cy="195" r="10" fill="#F0D9A0"/>
+            <circle cx="215" cy="180" r="9" fill="#EAA96B"/>
+            <ellipse cx="260" cy="190" rx="28" ry="11" fill="#2BC4B6" transform="rotate(-15 260 190)"/>
+            <ellipse cx="260" cy="190" rx="14" ry="11" fill="#1E9A8F" transform="rotate(-15 260 190)"/>
+
+            <circle cx="44" cy="44" r="18" fill="rgba(255,255,255,0.18)"/>
+            <path d="M38 44l4 4 8-8" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <form class="tarjeta-formulario" id="formulario-medicamento" novalidate>
+
+        <section class="tarjeta-formulario__seccion">
+          <h2 class="tarjeta-formulario__titulo-seccion">
+            <span class="tarjeta-formulario__icono-seccion tarjeta-formulario__icono-seccion--morado">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 15l6-6M13 5.5l1.5-1.5a3 3 0 1 1 4.5 4l-1.5 1.5M11 18.5L9.5 20a3 3 0 1 1-4.5-4l1.5-1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Detalles
+          </h2>
+
+          <div class="campo">
+            <label for="medicamento-paciente">Paciente</label>
+            <select id="medicamento-paciente" name="paciente" required>
+              <option value="" disabled selected>Selecciona un paciente</option>
+              <option value="dona-carmen">Doña Carmen</option>
+              <option value="don-roberto">Don Roberto</option>
+              <option value="maria-luisa">María Luisa</option>
+            </select>
+            <span class="campo__mensaje-error" data-error-para="medicamento-paciente">Selecciona el paciente para este recordatorio.</span>
+          </div>
+
+          <div class="tarjeta-formulario__fila">
+            <div class="campo">
+              <label for="medicamento-nombre">Nombre del Medicamento</label>
+              <div class="campo__con-icono">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <input type="text" id="medicamento-nombre" name="nombre" placeholder="e.g., Metformin 500mg" minlength="3" required>
+              </div>
+              <span class="campo__mensaje-error" data-error-para="medicamento-nombre">Escribe el nombre del medicamento.</span>
+            </div>
+
+            <div class="campo">
+              <label for="medicamento-dosis">Dosis</label>
+              <div class="campo__con-icono">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="9" width="16" height="8" rx="4" transform="rotate(-45 12 13)" stroke="currentColor" stroke-width="2"/><path d="M9.5 16.5l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <input type="text" id="medicamento-dosis" name="dosis" placeholder="e.g., 1 tableta" required>
+              </div>
+              <span class="campo__mensaje-error" data-error-para="medicamento-dosis">Escribe la dosis.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="tarjeta-formulario__seccion">
+          <h2 class="tarjeta-formulario__titulo-seccion">
+            <span class="tarjeta-formulario__icono-seccion tarjeta-formulario__icono-seccion--turquesa">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="white" stroke-width="2"/><path d="M12 7v5l3.5 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Cronograma y Frecuencia
+          </h2>
+
+          <div class="tarjeta-formulario__fila">
+            <div class="campo">
+              <label for="medicamento-hora">Hora del recordatorio</label>
+              <div class="campo__con-icono">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="13" r="8" stroke="currentColor" stroke-width="2"/><path d="M12 9v4l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 3h6M8 4l-2 2M16 4l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <input type="time" id="medicamento-hora" name="hora" required>
+              </div>
+              <span class="campo__mensaje-error" data-error-para="medicamento-hora">Selecciona una hora válida.</span>
+            </div>
+
+            <div class="campo">
+              <label for="medicamento-frecuencia">Frecuencia</label>
+              <select id="medicamento-frecuencia" name="frecuencia" required>
+                <option value="diario">Diario</option>
+                <option value="cada-8-horas">Cada 8 horas</option>
+                <option value="cada-12-horas">Cada 12 horas</option>
+                <option value="semanal">Semanal</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="campo">
+            <span class="campo__etiqueta-grupo">Días activos</span>
+            <div class="dias-activos" role="group" aria-label="Días activos del recordatorio" id="dias-activos">
+              <button type="button" class="dias-activos__dia" data-dia="D" aria-pressed="false">D</button>
+              <button type="button" class="dias-activos__dia" data-dia="L" aria-pressed="false">L</button>
+              <button type="button" class="dias-activos__dia" data-dia="M" aria-pressed="false">M</button>
+              <button type="button" class="dias-activos__dia" data-dia="X" aria-pressed="false">X</button>
+              <button type="button" class="dias-activos__dia" data-dia="J" aria-pressed="false">J</button>
+              <button type="button" class="dias-activos__dia" data-dia="V" aria-pressed="false">V</button>
+              <button type="button" class="dias-activos__dia" data-dia="S" aria-pressed="false">S</button>
+            </div>
+            <span class="campo__mensaje-error" data-error-para="dias-activos">Selecciona al menos un día.</span>
+          </div>
+        </section>
+
+        <div class="tarjeta-formulario__acciones">
+          <button type="button" class="boton boton--contorno" id="boton-cancelar-medicamento">Cancelar</button>
+          <button type="submit" class="boton boton--morado">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="boton__icono"><path d="M5 12.5l4.5 4.5L19 7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Guardar Recordatorio
+          </button>
+        </div>
+
+        <p class="tarjeta-formulario__feedback" id="medicamento-feedback" role="status">¡Recordatorio guardado correctamente!</p>
+      </form>
+
+    </div>
+
+    <div class="consejo-cuidador">
+      <span class="consejo-cuidador__icono">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.4.9 1 .9 1.7v.4h5.2v-.4c0-.7.3-1.3.9-1.7A6 6 0 0 0 12 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <div>
+        <p class="consejo-cuidador__titulo">Consejo profesional para cuidadores</p>
+        <p class="consejo-cuidador__texto">Configurar recordatorios 15 minutos antes de las comidas ayuda a tomar medicamentos que requieren el estómago vacío.</p>
+      </div>
+    </div>
+
+  </main>
+
+    <footer class="pie-dashboard">
+      <p>© 2026 MemoCare - Cuidado Cognitivo con Empatía</p>
+      <nav class="pie-dashboard__enlaces" aria-label="Enlaces del pie de página">
+        <a href="#">Soporte</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Contacto</a>
+        <a href="#">Términos</a>
+      </nav>
+    </footer>
+
+  </div>
+
+</div>
+
+<script src="./medicamentos-cuidador.js"></script>
+</body>
+</html>

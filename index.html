@@ -30,14 +30,7 @@
     </nav>
 
     <div class="navbar__acciones">
-      <div class="navbar__buscador">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        <input type="text" placeholder="Buscar..." aria-label="Buscar">
-      </div>
-      <button class="navbar__menu-boton" aria-label="Abrir menú de usuario">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <button class="navbar__perfil" aria-label="Perfil de usuario">
+      <button class="navbar__perfil" id="boton-perfil" type="button" aria-haspopup="dialog" aria-controls="modal-auth" aria-label="Iniciar sesión o registrarte">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="white" stroke-width="2"/><path d="M5 20c1.5-4 4.5-6 7-6s5.5 2 7 6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
     </div>
@@ -75,9 +68,9 @@
       <div class="hero__acciones">
         <button class="boton boton--morado">
           <svg viewBox="0 0 24 24" fill="white" aria-hidden="true" class="boton__icono"><circle cx="12" cy="12" r="10" fill="white" opacity="0.18"/><path d="M10 8l6 4-6 4V8z" fill="white"/></svg>
-          Cómo funcionamos
+          <a href="#funciones" >Cómo Funcionamos</a>
         </button>
-        <button class="boton boton--contorno">
+        <button class="boton boton--contorno" id="boton-familiar" type="button" aria-haspopup="dialog" aria-controls="modal-auth">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="boton__icono"><circle cx="9" cy="8" r="3.2" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 19c1-3.6 3.3-5.5 5.5-5.5s4.5 1.9 5.5 5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="17.5" cy="9" r="2.6" stroke="currentColor" stroke-width="1.8"/><path d="M14.8 19c.7-2.7 2.4-4.2 3.9-4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
           Soy familiar o cuidador
         </button>
@@ -92,34 +85,26 @@
 
     <div class="hero__ilustracion">
       <svg viewBox="0 0 460 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="hero__svg">
-        <!-- alfombra -->
         <ellipse cx="240" cy="372" rx="180" ry="22" fill="#F0D9DD"/>
         <ellipse cx="240" cy="372" rx="120" ry="14" fill="#E7C2C9"/>
 
-        <!-- sillón -->
         <rect x="90" y="250" width="300" height="115" rx="30" fill="#F4D58D"/>
         <rect x="72" y="222" width="40" height="135" rx="18" fill="#EFC468"/>
         <rect x="368" y="222" width="40" height="135" rx="18" fill="#EFC468"/>
         <rect x="90" y="232" width="300" height="32" rx="16" fill="#F8E3AC"/>
 
-        <!-- familiar -->
         <g>
           <ellipse cx="195" cy="368" rx="34" ry="10" fill="#1B2A6B" opacity="0.12"/>
-          <!-- piernas -->
           <rect x="178" y="300" width="16" height="68" rx="8" fill="#3B4A8B"/>
           <rect x="200" y="300" width="16" height="68" rx="8" fill="#3B4A8B"/>
           <ellipse cx="184" cy="370" rx="13" ry="7" fill="#FAFAFA"/>
           <ellipse cx="208" cy="370" rx="13" ry="7" fill="#FAFAFA"/>
-          <!-- torso -->
           <path d="M168 230c0-16 12-28 30-28s30 12 30 28v76h-60v-76z" fill="#E8833A"/>
-          <!-- manos juntas cerca del pecho-->
           <path d="M196 240c8 2 16 8 18 18" stroke="#E8833A" stroke-width="14" stroke-linecap="round"/>
           <circle cx="216" cy="258" r="8" fill="#F2C9A0"/>
           <path d="M172 242c-6 4-10 12-9 22" stroke="#E8833A" stroke-width="14" stroke-linecap="round"/>
           <circle cx="180" cy="262" r="8" fill="#F2C9A0"/>
-          <!-- destellos de gesto -->
           <path d="M222 246l3-4M226 252l4-1" stroke="#9A9AA0" stroke-width="1.6" stroke-linecap="round"/>
-          <!-- cabeza -->
           <circle cx="198" cy="196" r="27" fill="#F2C9A0"/>
           <path d="M172 192c-3-22 11-38 27-38 17 0 31 15 27 35-4-11-15-17-27-17s-23 7-27 20z" fill="#B5432C"/>
           <path d="M170 200c-3-4-3-9 0-12" stroke="#B5432C" stroke-width="6" stroke-linecap="round" fill="none"/>
@@ -131,27 +116,21 @@
           <ellipse cx="178" cy="208" rx="5" ry="3.5" fill="#F3A8A0" opacity="0.6"/>
         </g>
 
-        <!-- adulto mayor -->
         <g>
           <ellipse cx="280" cy="368" rx="36" ry="10" fill="#1B2A6B" opacity="0.12"/>
-          <!-- piernas -->
           <rect x="262" y="312" width="15" height="56" rx="7" fill="#1B2A6B"/>
           <rect x="284" y="312" width="15" height="56" rx="7" fill="#1B2A6B"/>
           <ellipse cx="269" cy="370" rx="12" ry="6" fill="#2E3A6B"/>
           <ellipse cx="291" cy="370" rx="12" ry="6" fill="#2E3A6B"/>
-          <!-- vestido -->
           <path d="M248 232c0-18 14-30 32-30s32 12 32 30l8 84h-80l8-84z" fill="#7B2E3B"/>
           <path d="M252 268c10 8 46 8 56 0" stroke="#5E2230" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-          <!-- manos cruzadas sobre el abdomen -->
           <path d="M266 250c-4 10-2 20 6 26" stroke="#7B2E3B" stroke-width="14" stroke-linecap="round"/>
           <path d="M294 250c4 10 2 20-6 26" stroke="#7B2E3B" stroke-width="14" stroke-linecap="round"/>
           <circle cx="272" cy="278" r="8" fill="#F2C9A0"/>
           <circle cx="288" cy="278" r="8" fill="#F2C9A0"/>
-          <!-- cabeza -->
           <circle cx="280" cy="200" r="25" fill="#F2C9A0"/>
           <path d="M256 198c-4-24 10-42 24-42 15 0 28 16 25 38-8-10-18-7-24-7-8 0-20-2-25 11z" fill="#E7E7EA"/>
           <path d="M258 196c5-5 13-8 22-8s17 3 22 8" stroke="#D8D8DC" stroke-width="3" stroke-linecap="round" fill="none"/>
-          <!-- lentes -->
           <circle cx="273" cy="202" r="6.5" fill="none" stroke="#5C3A21" stroke-width="1.6"/>
           <circle cx="289" cy="202" r="6.5" fill="none" stroke="#5C3A21" stroke-width="1.6"/>
           <path d="M279.5 202h3" stroke="#5C3A21" stroke-width="1.6"/>
@@ -166,7 +145,6 @@
   </div>
 </section>
 
-<!--SERVICIOS-->
 <section class="servicios" id="servicios">
   <div class="servicios__container">
 
@@ -252,7 +230,6 @@
   </div>
 </section>
 
-<!--BANNER INFERIOR (CTA descarga)-->
 <section class="banner-app">
   <div class="banner-app__container">
 
@@ -282,7 +259,6 @@
   </div>
 </section>
 
-<!--1. SECCIÓN FUNCIONES-->
 <section class="funciones" id="funciones">
   <div class="funciones__container">
     <div class="funciones__encabezado">
@@ -381,7 +357,7 @@
   </div>
 </section>
 
-<!--2. SECCIÓN BENEFICIOS-->
+
 <section class="beneficios" id="beneficios">
   <div class="beneficios__container">
 
@@ -390,16 +366,16 @@
         <circle cx="210" cy="200" r="190" fill="var(--color-fondo-suave)"/>
         <ellipse cx="210" cy="368" rx="140" ry="16" fill="#E3DEF7"/>
 
-        <!-- alfombra -->
+    
         <ellipse cx="210" cy="345" rx="125" ry="20" fill="#F0D9DD"/>
 
-        <!-- sillón -->
+    
         <rect x="80" y="240" width="260" height="100" rx="26" fill="#F4D58D"/>
         <rect x="66" y="215" width="34" height="115" rx="16" fill="#EFC468"/>
         <rect x="320" y="215" width="34" height="115" rx="16" fill="#EFC468"/>
         <rect x="80" y="225" width="260" height="28" rx="14" fill="#F8E3AC"/>
 
-        <!-- adulto mayor (izquierda) -->
+       
         <g>
           <ellipse cx="172" cy="300" rx="34" ry="14" fill="#6B2E3A" opacity="0.25"/>
           <rect x="148" y="225" width="20" height="56" rx="10" fill="#F2C9A0"/>
@@ -412,12 +388,12 @@
           <circle cx="166" cy="186" r="2.2" fill="#5C3A21"/>
           <circle cx="184" cy="186" r="2.2" fill="#5C3A21"/>
           <path d="M167 196c3 2.5 8 2.5 11 0" stroke="#B5754F" stroke-width="2" stroke-linecap="round" fill="none"/>
-          <!-- brazo hacia el familiar -->
+          
           <path d="M202 232c10 4 18 12 22 20" stroke="#7B2E3B" stroke-width="16" stroke-linecap="round"/>
           <circle cx="227" cy="256" r="9" fill="#F2C9A0"/>
         </g>
 
-        <!-- familiar (derecha) -->
+    
         <g>
           <ellipse cx="252" cy="300" rx="32" ry="14" fill="#7A4A2B" opacity="0.2"/>
           <rect x="232" y="222" width="18" height="54" rx="9" fill="#EFB48A"/>
@@ -428,11 +404,11 @@
           <circle cx="245" cy="180" r="2.1" fill="#4A2E1A"/>
           <circle cx="261" cy="180" r="2.1" fill="#4A2E1A"/>
           <path d="M246 190c2.5 2 7 2 9.5 0" stroke="#A8633A" stroke-width="2" stroke-linecap="round" fill="none"/>
-          <!-- brazo hacia el adulto mayor -->
+        
           <path d="M226 228c-10 4-18 10-22 18" stroke="#E8833A" stroke-width="15" stroke-linecap="round"/>
         </g>
 
-        <!-- corazón flotante -->
+   
         <path d="M210 120c-6-10-22-10-26 2-3 9 6 16 26 30 20-14 29-21 26-30-4-12-20-12-26-2z" fill="var(--color-morado)"/>
       </svg>
     </div>
@@ -477,7 +453,7 @@
   </div>
 </section>
 
-<!--3. SECCIÓN TESTIMONIOS-->
+
 <section class="testimonios" id="testimonios">
   <div class="testimonios__container">
     <div class="testimonios__encabezado">
@@ -560,7 +536,7 @@
   </div>
 </section>
 
-<!--4. SECCIÓN CONTÁCTANOS-->
+
 <section class="contacto" id="contacto">
   <div class="contacto__container">
 
@@ -620,7 +596,7 @@
   </div>
 </section>
 
-<!--5. FOOTER-->
+
 <footer class="pie">
   <div class="pie__container">
 
@@ -661,6 +637,96 @@
     <p>© 2026 MemoCare. Todos los derechos reservados.</p>
   </div>
 </footer>
+
+<!--MODAL DE AUTENTICACIÓN-->
+<div class="modal-auth" id="modal-auth" aria-hidden="true">
+  <div class="modal-auth__overlay" data-cerrar-modal></div>
+
+  <div class="modal-auth__caja" role="dialog" aria-modal="true" aria-labelledby="modal-auth-titulo">
+    <button class="modal-auth__cerrar" type="button" aria-label="Cerrar" data-cerrar-modal>✕</button>
+
+    <div class="modal-auth__pestañas" role="tablist">
+      <button class="modal-auth__pestaña modal-auth__pestaña--activa" type="button" role="tab" aria-selected="true" data-pestaña="login">Iniciar sesión</button>
+      <button class="modal-auth__pestaña" type="button" role="tab" aria-selected="false" data-pestaña="registro">Registrarme</button>
+    </div>
+
+    <!-- FORMULARIO: INICIAR SESIÓN -->
+    <form class="modal-auth__formulario" id="formulario-login" data-formulario="login" novalidate>
+      <h2 class="modal-auth__titulo" id="modal-auth-titulo">Bienvenido de nuevo</h2>
+
+      <div class="campo">
+        <label for="login-correo">Correo electrónico</label>
+        <input type="email" id="login-correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+        <span class="campo__mensaje-error" data-error-para="login-correo">Ingresa un correo electrónico válido.</span>
+      </div>
+
+      <div class="campo">
+        <label for="login-clave">Contraseña</label>
+        <input type="password" id="login-clave" name="clave" placeholder="Escribe tu contraseña" minlength="6" required>
+        <span class="campo__mensaje-error" data-error-para="login-clave">La contraseña debe tener al menos 6 caracteres.</span>
+      </div>
+
+      <div class="campo">
+        <span class="campo__etiqueta-grupo">Ingresar como</span>
+        <div class="campo__opciones-rol">
+          <label class="campo__rol">
+            <input type="radio" id="login-rol-adulto" name="rol" value="adulto-mayor" required>
+            Adulto mayor
+          </label>
+          <label class="campo__rol">
+            <input type="radio" id="login-rol-cuidador" name="rol" value="cuidador" required>
+            Familiar / Cuidador
+          </label>
+        </div>
+        <span class="campo__mensaje-error" data-error-para="login-rol">Selecciona un rol para continuar.</span>
+      </div>
+
+      <button type="submit" class="boton boton--morado boton--ancho">Iniciar sesión</button>
+      <p class="modal-auth__feedback" data-feedback-para="login" role="status">¡Sesión iniciada correctamente!</p>
+    </form>
+
+    <!-- FORMULARIO: REGISTRARME -->
+    <form class="modal-auth__formulario" id="formulario-registro" data-formulario="registro" novalidate hidden>
+      <h2 class="modal-auth__titulo">Crea tu cuenta</h2>
+
+      <div class="campo">
+        <label for="registro-nombre">Nombre completo</label>
+        <input type="text" id="registro-nombre" name="nombre" placeholder="Escribe tu nombre" minlength="3" required>
+        <span class="campo__mensaje-error" data-error-para="registro-nombre">Escribe tu nombre completo (mínimo 3 caracteres).</span>
+      </div>
+
+      <div class="campo">
+        <label for="registro-correo">Correo electrónico</label>
+        <input type="email" id="registro-correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+        <span class="campo__mensaje-error" data-error-para="registro-correo">Ingresa un correo electrónico válido.</span>
+      </div>
+
+      <div class="campo">
+        <label for="registro-clave">Contraseña</label>
+        <input type="password" id="registro-clave" name="clave" placeholder="Crea una contraseña" minlength="6" required>
+        <span class="campo__mensaje-error" data-error-para="registro-clave">La contraseña debe tener al menos 6 caracteres.</span>
+      </div>
+
+      <div class="campo">
+        <label for="registro-confirmar">Confirmar contraseña</label>
+        <input type="password" id="registro-confirmar" name="confirmar" placeholder="Repite tu contraseña" required>
+        <span class="campo__mensaje-error" data-error-para="registro-confirmar">Las contraseñas no coinciden.</span>
+      </div>
+
+      <div class="campo campo--casilla">
+        <label class="campo__casilla" for="registro-terminos">
+          <input type="checkbox" id="registro-terminos" name="terminos" required>
+          Acepto los términos y condiciones
+        </label>
+        <span class="campo__mensaje-error" data-error-para="registro-terminos">Debes aceptar los términos y condiciones.</span>
+      </div>
+
+      <button type="submit" class="boton boton--morado boton--ancho">Registrarme</button>
+      <p class="modal-auth__feedback" data-feedback-para="registro" role="status">¡Cuenta creada correctamente!</p>
+    </form>
+
+  </div>
+</div>
 
 <script src="./assets/scripts/main.js"></script>
 </body>
